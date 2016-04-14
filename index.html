@@ -5,7 +5,7 @@
     <head>
         
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <link rel="stylesheet" href="css/material.min.css">
+        <link rel="stylesheet" href="css/material.blue-indigo.min.css">
         <script defer src="js/material.min.js"></script>
         
         <link rel="stylesheet" href="css/main.css">
@@ -17,40 +17,45 @@
     
     <body>
         
-        <div class="demo-layout-transparent mdl-layout mdl-js-layout">
-            <header class="mdl-layout__header mdl-layout__header--transparent">
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+            <header class="mdl-layout__header">
                 <div class="mdl-layout__header-row">
                     <!-- Title -->
                     <span class="mdl-layout-title">J.L. Mann Robotics Club</span>
                     <!-- Add spacer, to align navigation to the right -->
                     <div class="mdl-layout-spacer"></div>
-                    <!-- Navigation -->
-                    <nav class="mdl-navigation">
-                        <a class="mdl-navigation__link" href="index.html">Home</a>
-                        <a class="mdl-navigation__link" href="">Link</a>
-                        <a class="mdl-navigation__link" href="">Link</a>
-                        <a class="mdl-navigation__link" href="">Link</a>
+                    <!-- Navigation. We hide it in small screens. -->
+                    <nav class="mdl-navigation mdl-layout--large-screen-only">
+                        <a class="mdl-navigation__link" href="">Home</a>
+                        <a class="mdl-navigation__link" href="">About</a>
+                        <a class="mdl-navigation__link" href="">Gallery</a>
+                        <a class="mdl-navigation__link" href="">News</a>
+                        <a class="mdl-navigation__link" href="">Calendar</a>
+                        <a class="mdl-navigation__link" href="">Resources</a>
                     </nav>
                 </div>
             </header>
             <div class="mdl-layout__drawer">
                 <span class="mdl-layout-title">Mann Robotics</span>
                 <nav class="mdl-navigation">
-                    <a class="mdl-navigation__link" href="index.html">Home</a>
-                    <a class="mdl-navigation__link" href="">Link</a>
-                    <a class="mdl-navigation__link" href="">Link</a>
-                    <a class="mdl-navigation__link" href="">Link</a>
+                    <a class="mdl-navigation__link" href="">Home</a>
+                    <a class="mdl-navigation__link" href="">About</a>
+                    <a class="mdl-navigation__link" href="">Gallery</a>
+                    <a class="mdl-navigation__link" href="">News</a>
+                    <a class="mdl-navigation__link" href="">Calendar</a>
+                    <a class="mdl-navigation__link" href="">Resources</a>
                 </nav>
             </div>
             
             <main class="mdl-layout__content">
-                <p>Content</p>
-                <p>Goes</p>
-                <p>Here</p>
+                <div class="page-content">
+                    
+                    <p>This is a test.</p>
+                    
+                </div>
             </main>
-            
         </div>
-        
+
     </body>
     
 </html>
