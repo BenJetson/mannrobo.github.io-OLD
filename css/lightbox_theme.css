@@ -1,0 +1,41 @@
+.lightbox-gallery {
+    /* background-color: #EEEEEE; */
+}
+
+.lightbox-gallery:after {
+   content: " ";
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+.lightbox-gallery a {
+    float: left;
+    margin-right: 2%;
+    margin-bottom: 2%;;
+    width: 23%;
+}
+
+.lightbox-gallery img {
+    display: block;
+    height: auto;
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+}
+
+.lightbox-gallery:hover img {
+    opacity: 0.6;
+}
+
+.lightbox-gallery img:hover {
+    box-shadow: 0 0 5px #999999;
+    opacity: 1.0;
+    transform: scale(1.03);
+}
+
+.lightbox-gallery a img {
+    /* border: none; */
+    border: 1px solid #CCCCCC;
+    padding: 2px;
+}
