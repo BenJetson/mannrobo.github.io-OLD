@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html ng-app="mannRoboWeb" lang="en">
+<html ng-cloak ng-app="mannRoboWeb" lang="en">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="utf-8">
@@ -14,7 +14,7 @@
         <title>Mann Robotics: Home</title>
         
     </head>
-    <body ng-controller="MainCtrl" ng-cloak>
+    <body ng-cloak ng-controller="MainCtrl">
         
         <md-toolbar style="position:fixed;" flex>
             <div class="md-toolbar-tools">
@@ -35,26 +35,42 @@
         
         <div class="toolbar-space"></div>
         
-        <md-sidenav class="md-sidenav-left md-whiteframe-8dp" md-component-id="left">
+        <md-sidenav class="md-sidenav-left md-whiteframe-8dp" md-component-id="left" flex layout="column">
             
             <!-- Finally figured out why content kept moving when
                  the sidebar was engaged. It's the scrollbar on 
                  the side of the display. :P -->
+            <md-toolbar class="md-tall md-hue-2">
+                <div layout="column" class="md-tooldbar-tools-bottom inset">
+                    <h2>Mann Robotics</h2>
+                </div>
+            </md-toolbar>
             
-            <h2>Mann Robotics</h2>
+            <md-list flex=100>
+                <md-list-item ng-repeat='item in menu' ng-href="{{item.href}}" aria-label="{{item.text}}">
+                    <div flex layout="row" layout-wrap>
+                        <md-icon flex=15 class="material-icons">{{ item.icon }}</md-icon>
+                        <span flex=85>{{ item.text }}</span>
+                    </div>
+                </md-list-item>
+            </md-list>
             <md-divider></md-divider>
-            <md-button ng-href="index.html">Home</md-button>
-            <md-button ng-href="about.html">About Us</md-button>
-            <md-button ng-href="gallery.html">Gallery</md-button>
-            <md-button ng-href="news.html">News</md-button>
-            <md-button ng-href="calendar.html">Calendar</md-button>
-            <md-button ng-href="resources.html">Resources</md-button>
-            <md-divider></md-divider>
-            <md-button ng-href="settings.html"><i class="material-icons">settings</i>Settings</md-button>
+            <md-list>
+                <md-list-item aria-label="Contact Us" ng-href="contact.html">
+                    <div flex layout="row" layout-wrap>
+                        <md-icon flex=15 class="material-icons">email</md-icon>
+                        <span flex=85>Contact Us</span>
+                    </div>
+                </md-list-item>
+                <md-list-item aria-label="Settings" ng-click="settingsHandler();">
+                    <div flex layout="row" layout-wrap>
+                        <md-icon flex=15 class="material-icons">settings</md-icon>
+                        <span flex=85>Settings</span>
+                    </div>
+                </md-list-item>
+            </md-list>
         </md-sidenav>
         
-        <md-content flex layout-padding>
-            
             <div layout="row" layout-align="center start">
                 <div layout-fill>
                     <md-card>
@@ -83,6 +99,7 @@
                 </div>
             </div>
             
+            <md-button ng-click="settingsHandler();">alert</md-button>
             <br>
             <br>
             <br>
