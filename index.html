@@ -38,46 +38,46 @@
         </header>
         
         
-        <burger-menu>
-            <md-sidenav class="md-sidenav-left md-whiteframe-8dp" 
-                        md-component-id="left" flex layout="column">
-    <!--                     md-is-locked-open="$mdMedia('gt-md')">-->
-
-                <!-- Finally figured out why content kept moving when
-                     the sidebar was engaged. It's the scrollbar on 
-                     the side of the display. :P -->
-                <md-toolbar class="md-tall md-hue-2">
-                    <div layout="column" class="md-tooldbar-tools-bottom inset">
-                        <h2>Mann Robotics</h2>
-                    </div>
-                </md-toolbar>
-
-                <md-list flex=100>
-                    <md-list-item ng-repeat='item in menu' ng-href="{{item.href}}" aria-label="{{item.text}}">
-                        <div flex layout="row" layout-wrap>
-                            <md-icon flex=15 class="material-icons">{{ item.icon }}</md-icon>
-                            <span flex=85>{{ item.text }}</span>
-                        </div>
-                    </md-list-item>
-                </md-list>
-                <md-divider></md-divider>
-                <md-list>
-                    <md-list-item aria-label="Contact Us" ng-href="contact.html">
-                        <div flex layout="row" layout-wrap>
-                            <md-icon flex=15 class="material-icons">email</md-icon>
-                            <span flex=85>Contact Us</span>
-                        </div>
-                    </md-list-item>
-                    <md-list-item aria-label="Settings" ng-click="settingsHandler();">
-                        <div flex layout="row" layout-wrap>
-                            <md-icon flex=15 class="material-icons">settings</md-icon>
-                            <span flex=85>Settings</span>
-                        </div>
-                    </md-list-item>
-                </md-list>
-            </md-sidenav>
-        </burger-menu>
         
+        <md-sidenav class="md-sidenav-left md-whiteframe-8dp" 
+                    md-component-id="left" flex layout="column">
+<!--                     md-is-locked-open="$mdMedia('gt-md')">-->
+            
+            <!-- Finally figured out why content kept moving when
+                 the sidebar was engaged. It's the scrollbar on 
+                 the side of the display. :P -->
+            <md-toolbar class="md-tall md-hue-2">
+                <div layout="column" class="md-tooldbar-tools-bottom inset">
+                    <h2>Mann Robotics</h2>
+                </div>
+            </md-toolbar>
+            
+            <md-list flex=100>
+                <md-list-item ng-repeat='item in menu' ng-href="{{item.href}}" aria-label="{{item.text}}">
+                    <div flex layout="row" layout-wrap>
+                        <md-icon flex=15 class="material-icons">{{ item.icon }}</md-icon>
+                        <span flex=85>{{ item.text }}</span>
+                    </div>
+                </md-list-item>
+            </md-list>
+            <md-divider></md-divider>
+            <md-list>
+                <md-list-item aria-label="Contact Us" ng-href="contact.html">
+                    <div flex layout="row" layout-wrap>
+                        <md-icon flex=15 class="material-icons">email</md-icon>
+                        <span flex=85>Contact Us</span>
+                    </div>
+                </md-list-item>
+                <md-list-item aria-label="Settings" ng-click="settingsHandler();">
+                    <div flex layout="row" layout-wrap>
+                        <md-icon flex=15 class="material-icons">settings</md-icon>
+                        <span flex=85>Settings</span>
+                    </div>
+                </md-list-item>
+            </md-list>
+        </md-sidenav>
+        
+        <md-content>
             <div layout="row" layout-align="center start">
                 <div flex layout-fill>
                     <md-card>
