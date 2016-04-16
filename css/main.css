@@ -15,6 +15,19 @@ nav {
     margin-left: auto;
 }
 
+md-sidenav {
+    padding: 2%;
+    padding-top: 0;
+}
+
+md-sidenav .md-button {
+    width: 100%;
+    margin: 0;
+    height: 5%;
+    vertical-align: middle;
+    align-content: center;
+}
+
 @media (max-width: 700px) {
 
 }
