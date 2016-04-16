@@ -37,14 +37,16 @@
 
 function loadHeadings() {
     
+    $.ajax({url: "sidenav.html", success:function(result) {
+        $('body').prepend(result);
+    }})
+    
     $.ajax({url: "header.html", success: function(result){
-        $(".mdl-layout").prepend(result);
+        $("body").prepend(result);
     }});
     
     $.ajax({url: "footer.html", success: function(result){
-        $(".page-content").append(result);
+        $("md-content").append(result);
     }});
-    
-    componentHandler.upgradeDom();
-    
+
 }
