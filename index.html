@@ -1,40 +1,137 @@
 <!DOCTYPE html>
 
-<html lang="en">
-    
+<html ng-app="mannRoboWeb" lang="en">
     <head>
-        
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <link rel="stylesheet" href="css/material.blue-indigo.min.css">
-        <script defer src="js/material.min.js"></script>
-        
-        <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
-        
-        <link rel="stylesheet" href="css/main.css">
-        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Angular Material style sheet -->
+        <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="icon" href="favicon.ico">
         
-        <script src="js/jquery-2.1.4.min.js"></script>
-        <script src="js/ajax_headings.js"></script>
+        <title>Mann Robotics: Home</title>
         
     </head>
-    
-    <body onload="loadHeadings();">
+    <body ng-controller="MainCtrl" ng-cloak>
         
-        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <md-toolbar style="position:fixed;" flex>
+            <div class="md-toolbar-tools">
+                <md-button ng-click="toggleNav();" class="md-icon-button" aria-label="Menu">
+                    <md-icon class="material-icons">menu</md-icon>
+                </md-button>
+                <h1>J.L. Mann Robotics Club</h1>
+                <nav>
+                    <md-button ng-href="index.html">Home</md-button>
+                    <md-button ng-href="about.html">About Us</md-button>
+                    <md-button ng-href="gallery.html">Gallery</md-button>
+                    <md-button ng-href="news.html">News</md-button>
+                    <md-button ng-href="calendar.html">Calendar</md-button>
+                    <md-button ng-href="resources.html">Resources</md-button>
+                </nav>
+            </div>
+        </md-toolbar>
+        
+        <div class="toolbar-space"></div>
+        
+        <md-sidenav class="md-sidenav-left md-whiteframe-8dp" md-component-id="left">
             
-            <main class="mdl-layout__content">
-                <div class="page-content">
-                    
-                    <p>This is a test.</p>
-                    
-                    <div id="footerArea"></div>
-                    
+            <!-- Finally figured out why content kept moving when
+                 the sidebar was engaged. It's the scrollbar on 
+                 the side of the display. :P -->
+            
+            <h2>Mann Robotics</h2>
+        </md-sidenav>
+        
+        <md-content flex layout-padding>
+            
+            <div layout="row" layout-align="center start">
+                <div layout-fill>
+                    <md-card>
+                        <md-card-header>
+                          <md-card-avatar>
+                            <img src=""/>
+                          </md-card-avatar>
+                          <md-card-header-text>
+                            <span class="md-title">Angular</span>
+                            <span class="md-subhead">Material</span>
+                          </md-card-header-text>
+                        </md-card-header>
+                        <img ng-src="{{imagePath}}" class="md-card-image" alt="Washed Out">
+                        <md-card-title>
+                          <md-card-title-text>
+                            <span class="md-headline">Card header</span>
+                          </md-card-title-text>
+                        </md-card-title>
+                        <md-card-content>
+                          <p>
+                            The titles of Washed Out's breakthrough song and the first single from Paracosm share the
+                            two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
+                          </p>
+                        </md-card-content>
+                      </md-card>
                 </div>
-            </main>
-        </div>
-
-    </body>
+            </div>
+            
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br><br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            
+        </md-content>
+        
+        <!-- Angular Material requires Angular.js Libraries -->
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+        
+        <!-- Angular Material Library -->
+        <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
+        
+        <!-- jQuery Library -->
+        <script src="js/jquery-2.1.4.min.js"></script>
+        
+        <!-- Your application bootstrap  -->
+        <script src="js/angularBootstrap.js"></script>
     
+    </body>
 </html>

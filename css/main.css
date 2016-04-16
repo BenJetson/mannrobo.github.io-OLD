@@ -1,29 +1,26 @@
-header {
-/*    background-color: navy;*/
-}
 
 * {
     font-family: Roboto;
 }
 
-/*.active-tab {
-    background-color: #1576a3;
-    border-bottom: 5px solid #ddd;
-}*/
-
-.mdl-layout__header  {
-/*    background: url('../img/mannrobo_banner.png');*/
-/*    height: 300px !important;*/
+.toolbar-space {
+    height: 56px;
 }
 
-.page-content {
-    padding: 20px;
-    max-width: 1000px;
-    margin: 0 auto;
+md-toolbar {
+    box-shadow: 0px 2px 4px #bbb;
+}
+
+nav {
+    margin-left: auto;
 }
 
 @media (max-width: 700px) {
-    .page-content {
-        padding: 10px;
+
+}
+
+@media (max-width: 975px) {
+    nav {
+        display: none;
     }
 }
