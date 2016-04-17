@@ -35,3 +35,9 @@ md-sidenav md-toolbar img {
 md-content {
     background-color: #f4f4f4;
 }
+
+@media (min-width: 960px) {
+    md-content {
+        padding: 10px;
+    }
+}

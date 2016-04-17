@@ -1,11 +1,16 @@
 var app = angular.module('mannRoboWeb', ['ngMaterial']);
 
-app.controller('MainCtrl', function($scope, $timeout, $mdSidenav, $mdMedia, $log, $http) {
+app.controller('MainCtrl', function($scope, $timeout, $mdSidenav, $mdMedia, $log, $http, pageParameters) {
     //$scope.hello = 'yello';
+    
+    $scope.params = pageParameters.getParameters();
+    
     $scope.toggleNav = function(){$mdSidenav('left').toggle()};
     $scope.isNavOpen = function() {
         return $mdSidenav('left').isOpen();
-    }
+    };
+        
+//    $http.get("files/toolbar.html")
 });
 
 app.controller('menuCtrl', function($scope, $mdSidenav, $mdDialog, $http, $log) {

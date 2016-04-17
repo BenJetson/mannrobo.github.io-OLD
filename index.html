@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html ng-cloak ng-app="mannRoboWeb" lang="en">
+<html ng-cloak ng-app="mannRoboWeb" ng-controller="MainCtrl" lang="en">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
@@ -14,10 +14,10 @@
         <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
         <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        
+        <!-- Custom Styling -->
         <link rel="stylesheet" href="css/main.css">
         <link rel="icon" href="favicon.ico">
-        
-        <title>Mann Robotics</title>
         
         <!-- jQuery Library -->
         <script src="js/jquery-2.1.4.min.js"></script>
@@ -36,6 +36,21 @@
         
         <!-- Your application bootstrap  -->
         <script src="js/angularBootstrap.js"></script>
+        <script>
+            app.service('pageParameters', function() {
+                return {
+                    getParameters: function() {
+                        return {
+                            pageTitle: "Home",
+                            titleInTab: false,
+                            showBack: false,
+                            showMenu: true
+                        };
+                    }
+                };
+            });
+        </script>
+        
         
         <!-- Google Analytics -->
         <script>
@@ -48,45 +63,51 @@
             ga('send', 'pageview');
 
         </script>
-    </head>
-    <body ng-cloak ng-controller="MainCtrl" layout="row">
         
-        <md-sidenav class="md-sidenav-left md-whiteframe-8dp" 
-                    md-component-id="left" flex layout="column" 
-                    md-is-locked-open="$mdMedia('gt-sm')"
-                    md-swipe-left="toggleNav();">
-            <div ng-controller="menuCtrl">
-                <md-toolbar class="md-tall md-hue-2">
-                    <div layout="column" class="md-tooldbar-tools-bottom inset">
-                        <img src="img/mann_logo128.png">
-                        <h2>Mann Robotics</h2>
-                    </div>
-                </md-toolbar>
-                <md-list flex=100>
-                    <md-list-item ng-repeat='item in menu' ng-href="{{item.href}}" aria-label="{{item.text}}">
-                        <div flex layout="row" layout-wrap>
-                            <md-icon flex=15 class="material-icons">{{ item.icon }}</md-icon>
-                            <span flex=85>{{ item.text }}</span>
+<!--        <title ng-bind="('Mann Robotics' + (params.titleInTab ? (': ' + params.pageTitle) : ''))">-->
+        <title ng-bind="('Mann Robotics' + (params.titleInTab ? ': ' + params.pageTitle : ''))">
+            Mann Robotics
+        </title>
+    </head>
+    <body ng-cloak layout="row">
+        <div id="burgerMenu" layout="row">
+            <md-sidenav class="md-sidenav-left md-whiteframe-8dp" 
+                        md-component-id="left" flex layout="column" 
+                        md-is-locked-open="$mdMedia('gt-sm')"
+                        md-swipe-left="toggleNav();">
+                <div ng-controller="menuCtrl">
+                    <md-toolbar class="md-tall md-hue-2">
+                        <div layout="column" class="md-tooldbar-tools-bottom inset">
+                            <img src="img/mann_logo128.png">
+                            <h2>Mann Robotics</h2>
                         </div>
-                    </md-list-item>
-                </md-list>
-                <md-divider></md-divider>
-                <md-list>
-                    <md-list-item aria-label="Contact Us" ng-href="contact.html">
-                        <div flex layout="row" layout-wrap>
-                            <md-icon flex=15 class="material-icons">email</md-icon>
-                            <span flex=85>Contact Us</span>
-                        </div>
-                    </md-list-item>
-                    <md-list-item aria-label="Settings" ng-click="settingsHandler();">
-                        <div flex layout="row" layout-wrap>
-                            <md-icon flex=15 class="material-icons">settings</md-icon>
-                            <span flex=85>Settings</span>
-                        </div>
-                    </md-list-item>
-                </md-list>
-            </div>
-        </md-sidenav>
+                    </md-toolbar>
+                    <md-list flex=100>
+                        <md-list-item ng-repeat='item in menu' ng-href="{{item.href}}" aria-label="{{item.text}}">
+                            <div flex layout="row" layout-wrap>
+                                <md-icon flex=15 class="material-icons">{{ item.icon }}</md-icon>
+                                <span flex=85>{{ item.text }}</span>
+                            </div>
+                        </md-list-item>
+                    </md-list>
+                    <md-divider></md-divider>
+                    <md-list>
+                        <md-list-item aria-label="Contact Us" ng-href="contact.html">
+                            <div flex layout="row" layout-wrap>
+                                <md-icon flex=15 class="material-icons">email</md-icon>
+                                <span flex=85>Contact Us</span>
+                            </div>
+                        </md-list-item>
+                        <md-list-item aria-label="Settings" ng-click="settingsHandler();">
+                            <div flex layout="row" layout-wrap>
+                                <md-icon flex=15 class="material-icons">settings</md-icon>
+                                <span flex=85>Settings</span>
+                            </div>
+                        </md-list-item>
+                    </md-list>
+                </div>
+            </md-sidenav>
+        </div>
         <div layout="column" style="flex-grow:1;">
 <!--                <md-toolbar style="position:fixed;" flex>-->
             <header>
@@ -96,7 +117,7 @@
                                    aria-label="Menu" hide-gt-sm>
                             <md-icon class="material-icons">menu</md-icon>
                         </md-button>
-                        <h1>Home</h1>
+                        <h1>{{params.pageTitle}}</h1>
                     </div>
                 </md-toolbar>
             </header>
