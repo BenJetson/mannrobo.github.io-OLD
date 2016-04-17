@@ -28,6 +28,8 @@ md-sidenav md-toolbar h2 {
 md-sidenav md-toolbar img {
     display: block;
     margin: 0 auto;
+    width: 25%;
+    height: 25%;
     max-width: 25%;
     max-height: 25%;
 }
@@ -35,6 +37,7 @@ md-sidenav md-toolbar img {
 md-content {
     background-color: #f4f4f4;
 }
+
 
 @media (min-width: 960px) {
     md-content {
