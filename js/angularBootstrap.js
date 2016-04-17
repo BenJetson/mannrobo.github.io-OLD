@@ -6,9 +6,6 @@ app.controller('MainCtrl', function($scope, $timeout, $mdSidenav, $mdMedia, $log
     $scope.isNavOpen = function() {
         return $mdSidenav('left').isOpen();
     }
-    
-    $log.debug($mdMedia('gt-md'));
-    
 });
 
 app.controller('menuCtrl', function($scope, $mdSidenav, $mdDialog, $http, $log) {
