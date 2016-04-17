@@ -13,14 +13,14 @@
         
         <title>Mann Robotics: Home</title>
         
+        <!-- jQuery Library -->
+        <script src="js/jquery-2.1.4.min.js"></script>
+        
         <!-- Angular Material requires Angular.js Libraries -->
         <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
-        
-        <!-- jQuery Library -->
-        <script src="js/jquery-2.1.4.min.js"></script>
         
         <!-- Load the headings. -->
         <!--<script src="js/ajax_headings.js"></script>-->
@@ -31,131 +31,123 @@
         <!-- Your application bootstrap  -->
         <script src="js/angularBootstrap.js"></script>
     </head>
-    <body ng-cloak ng-controller="MainCtrl">
-        
-        <header>
-            <md-toolbar style="position:fixed;" flex>
-                <div class="md-toolbar-tools">
-                    <md-button ng-click="toggleNav();" class="md-icon-button" aria-label="Menu">
-                        <md-icon class="material-icons">menu</md-icon>
-                    </md-button>
-                    <h1>J.L. Mann Robotics Club</h1>
-                    <nav>
-                        <md-button ng-href="index.html">Home</md-button>
-                        <md-button ng-href="about.html">About Us</md-button>
-                        <md-button ng-href="gallery.html">Gallery</md-button>
-                        <md-button ng-href="news.html">News</md-button>
-                        <md-button ng-href="calendar.html">Calendar</md-button>
-                        <md-button ng-href="resources.html">Resources</md-button>
-                    </nav>
-                </div>
-            </md-toolbar>
-            <div class="toolbar-space"></div>
-        </header>
+    <body ng-cloak ng-controller="MainCtrl" layout="row">
         
         <md-sidenav class="md-sidenav-left md-whiteframe-8dp" 
-                    md-component-id="left" flex layout="column">    
-                   <!-- md-is-locked-open="$mdMedia('gt-md')">-->
-
-            <md-toolbar class="md-tall md-hue-2">
-                <div layout="column" class="md-tooldbar-tools-bottom inset">
-                    <h2>Mann Robotics</h2>
-                </div>
-            </md-toolbar>
-            <md-list flex=100>
-                <md-list-item ng-repeat='item in menu' ng-href="{{item.href}}" aria-label="{{item.text}}">
-                    <div flex layout="row" layout-wrap>
-                        <md-icon flex=15 class="material-icons">{{ item.icon }}</md-icon>
-                        <span flex=85>{{ item.text }}</span>
+                    md-component-id="left" flex layout="column" 
+                    md-is-locked-open="$mdMedia('gt-sm')">
+            <div ng-controller="menuCtrl">
+                <md-toolbar class="md-tall md-hue-2">
+                    <div layout="column" class="md-tooldbar-tools-bottom inset">
+                        <img src="img/mann_logo.png">
+                        <h2>Mann Robotics</h2>
                     </div>
-                </md-list-item>
-            </md-list>
-            <md-divider></md-divider>
-            <md-list>
-                <md-list-item aria-label="Contact Us" ng-href="contact.html">
-                    <div flex layout="row" layout-wrap>
-                        <md-icon flex=15 class="material-icons">email</md-icon>
-                        <span flex=85>Contact Us</span>
-                    </div>
-                </md-list-item>
-                <md-list-item aria-label="Settings" ng-click="settingsHandler();">
-                    <div flex layout="row" layout-wrap>
-                        <md-icon flex=15 class="material-icons">settings</md-icon>
-                        <span flex=85>Settings</span>
-                    </div>
-                </md-list-item>
-            </md-list>
-
-        </md-sidenav>
-        
-        <md-content>
-            
-            <div layout="row" layout-align="center start">
-                <div flex layout-fill>
-                    <md-card>
-                        <md-card-title>
-                          <md-card-title-text>
-                            <span class="md-headline">Website Under Construction</span>
-                          </md-card-title-text>
-                        </md-card-title>
-                        <md-card-content>
-                          <p>
-                            This website is in the process of being built.<br>During that time, this website may be incomplete.
-                          </p>
-                        </md-card-content>
-                      </md-card>
-                </div>
+                </md-toolbar>
+                <md-list flex=100>
+                    <md-list-item ng-repeat='item in menu' ng-href="{{item.href}}" aria-label="{{item.text}}">
+                        <div flex layout="row" layout-wrap>
+                            <md-icon flex=15 class="material-icons">{{ item.icon }}</md-icon>
+                            <span flex=85>{{ item.text }}</span>
+                        </div>
+                    </md-list-item>
+                </md-list>
+                <md-divider></md-divider>
+                <md-list>
+                    <md-list-item aria-label="Contact Us" ng-href="contact.html">
+                        <div flex layout="row" layout-wrap>
+                            <md-icon flex=15 class="material-icons">email</md-icon>
+                            <span flex=85>Contact Us</span>
+                        </div>
+                    </md-list-item>
+                    <md-list-item aria-label="Settings" ng-click="settingsHandler();">
+                        <div flex layout="row" layout-wrap>
+                            <md-icon flex=15 class="material-icons">settings</md-icon>
+                            <span flex=85>Settings</span>
+                        </div>
+                    </md-list-item>
+                </md-list>
             </div>
-            
-            <md-button ng-click="settingsHandler();">alert</md-button>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br><br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            
-            <footer>
-                
-            </footer>
-            
-        </md-content>
-        
-    
+        </md-sidenav>
+        <div layout="column" style="flex-grow:1;">
+<!--                <md-toolbar style="position:fixed;" flex>-->
+            <header>
+                <md-toolbar>
+                    <div class="md-toolbar-tools">
+                        <md-button ng-click="toggleNav();" class="md-icon-button" 
+                                   aria-label="Menu" hide-gt-sm>
+                            <md-icon class="material-icons">menu</md-icon>
+                        </md-button>
+                        <h1>Home</h1>
+                    </div>
+                </md-toolbar>
+            </header>
+
+            <md-content>
+                <div class="toolbar-space"></div>
+                <div ng-repeat="t in [0,1,2,3,4,5,6,7,8,9]" layout="row" layout-align="center start">
+                    <div flex layout-fill>
+                        <md-card>
+                            <md-card-title>
+                              <md-card-title-text>
+                                <span class="md-headline">Website Under Construction</span>
+                              </md-card-title-text>
+                            </md-card-title>
+                            <md-card-content>
+                              <p>
+                                This website is in the process of being built.<br>During that time, this website may be incomplete.
+                              </p>
+                            </md-card-content>
+                        </md-card>
+                    </div>
+                </div>
+
+                <md-button ng-click="settingsHandler();">alert</md-button>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br><br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <footer>
+
+                </footer>
+            </md-content>
+        </div>
     </body>
 </html>
