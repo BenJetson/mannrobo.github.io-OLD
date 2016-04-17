@@ -37,16 +37,25 @@
 
 function loadHeadings() {
     
-    $.ajax({url: "sidenav.html", success:function(result) {
-        $('body').prepend(result);
-    }})
+//    alert();
     
-    $.ajax({url: "header.html", success: function(result){
-        $("body").prepend(result);
-    }});
+    $(function() {
+        $('header').load('header.html');
+        $('footer').load('footer.html');
+        $('md-sidenav').load('sidenav.html');
+//        $('body').load('sidenav.html')
+    })
     
-    $.ajax({url: "footer.html", success: function(result){
-        $("md-content").append(result);
-    }});
+//    $.ajax({url: "sidenav.html", success:function(result) {
+//        $('body').prepend(result);
+//    }})
+//    
+//    $.ajax({url: "header.html", success: function(result){
+//        $("body").prepend(result);
+//    }});
+//    
+//    $.ajax({url: "footer.html", success: function(result){
+//        $("md-content").append(result);
+//    }});
 
 }
