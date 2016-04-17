@@ -4,7 +4,7 @@
 }
 
 body {
-    overflow: hidden;
+/*    overflow: hidden;*/
 }
 
 md-toolbar {
@@ -30,4 +30,8 @@ md-sidenav md-toolbar img {
     margin: 0 auto;
     max-width: 25%;
     max-height: 25%;
+}
+
+md-content {
+    background-color: #f4f4f4;
 }
