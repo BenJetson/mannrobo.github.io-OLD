@@ -40,7 +40,8 @@
         
         <md-sidenav class="md-sidenav-left md-whiteframe-8dp" 
                     md-component-id="left" flex layout="column" 
-                    md-is-locked-open="$mdMedia('gt-sm')">
+                    md-is-locked-open="$mdMedia('gt-sm')"
+                    md-swipe-left="toggleNav();">
             <div ng-controller="menuCtrl">
                 <md-toolbar class="md-tall md-hue-2">
                     <div layout="column" class="md-tooldbar-tools-bottom inset">
