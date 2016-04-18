@@ -37,15 +37,15 @@
         <!-- Your application bootstrap  -->
         <script src="js/angularBootstrap.js"></script>
         <script>
-            app.service('pageParameters', function() {
+            app.service('pageParameters', function(pageParamCheck) {
                 return {
                     getParameters: function() {
-                        return {
+                        return pageParamCheck.validate({
                             pageTitle: "Home",
                             titleInTab: false,
-                            showBack: false,
-                            showMenu: true
-                        };
+                            hideBack: true,
+                            hideMenu: false
+                        });
                     }
                 };
             });
@@ -120,8 +120,12 @@
             <header>
                 <md-toolbar>
                     <div class="md-toolbar-tools">
+                        <md-button ng-click="browserBack();" class="md-icon-button" 
+                                   aria-label="Back" ng-hide="{{params.hideBack}}">
+                            <md-icon class="material-icons">arrow_back</md-icon>
+                        </md-button>
                         <md-button ng-click="toggleNav();" class="md-icon-button" 
-                                   aria-label="Menu" hide-gt-sm>
+                                   aria-label="Menu" hide-gt-sm ng-hide="{{params.hideMenu}}">
                             <md-icon class="material-icons">menu</md-icon>
                         </md-button>
                         <h1>{{params.pageTitle}}</h1>

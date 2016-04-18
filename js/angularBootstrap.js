@@ -1,16 +1,52 @@
 var app = angular.module('mannRoboWeb', ['ngMaterial']);
 
 app.controller('MainCtrl', function($scope, $timeout, $mdSidenav, $mdMedia, $log, $http, pageParameters) {
-    //$scope.hello = 'yello';
     
     $scope.params = pageParameters.getParameters();
     
-    $scope.toggleNav = function(){$mdSidenav('left').toggle()};
+//    $http.get("files/pageParamDefaults.json").then(function(response) {
+//        for (key in response.data) {
+//            if (!(key in $scope.params)) { 
+//                $scope.params[key] = response.data[key]
+//                $log.debug($scope.params);
+//            };
+//        };
+//    });
+    
+    $scope.toggleNav = function(){
+        if (!$mdMedia('gt-sm')) {
+            $mdSidenav('left').toggle()
+        }
+    };
     $scope.isNavOpen = function() {
         return $mdSidenav('left').isOpen();
     };
-        
+    $scope.browserBack= function(){window.history.back();};
 //    $http.get("files/toolbar.html")
+    $log.debug($mdMedia('gt-sm'));
+});
+
+app.service('pageParamCheck', function($log) {
+    return {
+        validate: function(currentParameters) {
+            defaultParameters = {
+                pageTitle : "Mann Robotics",
+                hideBack : true,
+                hideMenu : false,
+                titleInTab : true
+            };
+            
+            for (key in defaultParameters) {
+                if (!(key in currentParameters)) { 
+                    currentParameters[key] = defaultParameters[key]
+                };
+            };
+            
+            $log.debug(currentParameters);
+            return currentParameters;
+                
+        }
+    }
 });
 
 app.controller('menuCtrl', function($scope, $mdSidenav, $mdDialog, $http, $log) {
