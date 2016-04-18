@@ -18,12 +18,13 @@ app.controller('MainCtrl', function($scope, $timeout, $mdSidenav, $mdMedia, $log
             $mdSidenav('left').toggle()
         }
     };
+    
     $scope.isNavOpen = function() {
         return $mdSidenav('left').isOpen();
     };
+    
     $scope.browserBack= function(){window.history.back();};
-//    $http.get("files/toolbar.html")
-    $log.debug($mdMedia('gt-sm'));
+    
 });
 
 app.service('pageParamCheck', function($log) {
@@ -42,7 +43,6 @@ app.service('pageParamCheck', function($log) {
                 };
             };
             
-            $log.debug(currentParameters);
             return currentParameters;
                 
         }
