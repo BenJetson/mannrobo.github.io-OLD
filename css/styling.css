@@ -36,6 +36,10 @@ md-sidenav img {
     max-height: 100%;
 }
 
+md-content {
+    padding: 10px 15px;
+}
+
 body, md-content {
     background-color: #f4f4f4;
 }
