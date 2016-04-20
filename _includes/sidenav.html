@@ -1,0 +1,45 @@
+<div id="burgerMenu" layout="row" md-swipe-left="toggleNav();">
+    <md-sidenav class="md-sidenav-left md-whiteframe-8dp" 
+                md-component-id="left" layout="column" 
+                md-is-locked-open="$mdMedia('gt-sm')">
+<!--                        layout-align="none stretch">-->
+        <div ng-controller="menuCtrl" layout="column" layout-align="none stretch" style="height: 100%">
+            <md-toolbar class="md-tall md-hue-2" style="overflow: hidden;" layout-align="center center">
+                <div layout="column" class="md-tooldbar-tools-bottom inset" layout-align="center center">
+                    <img src="img/mann_logo72.png">
+                    <h2>Mann Robotics</h2>
+                </div>
+            </md-toolbar>
+            <div layout="column" layout-align="space-between none" style="height: 100%">
+                <div>
+                    <md-list>
+                        <md-list-item ng-repeat='item in menu' ng-href="[[item.href]]" aria-label="[[item.text]]" 
+                                      layout="column" layout-align="center center">
+                            <div flex layout="row" layout-align="none center" layout-wrap>
+                                <md-icon flex=15 class="material-icons">[[ item.icon ]]</md-icon>
+                                <span flex=85>[[ item.text ]]</span>
+                            </div>
+                        </md-list-item>
+                    </md-list>
+                </div>
+                <div>
+                    <md-divider></md-divider>
+                    <md-list style="max-height: ">
+                        <md-list-item aria-label="Contact Us" ng-href="contact.html">
+                            <div flex layout="row" layout-wrap>
+                                <md-icon flex=15 class="material-icons">email</md-icon>
+                                <span flex=85>Contact Us</span>
+                            </div>
+                        </md-list-item>
+                        <md-list-item aria-label="Settings" ng-click="settingsHandler();">
+                            <div flex layout="row" layout-wrap>
+                                <md-icon flex=15 class="material-icons">settings</md-icon>
+                                <span flex=85>Settings</span>
+                            </div>
+                        </md-list-item>
+                    </md-list>
+                </div>
+            </div>
+        </div>
+    </md-sidenav>
+</div>

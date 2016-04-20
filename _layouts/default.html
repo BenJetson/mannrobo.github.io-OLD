@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-cloak ng-app="mannRoboWeb" ng-controller="MainCtrl" lang="en">
+    
+    {% include head.html %}
+    
+    <body layout="row">
+        
+        {% include sidenav.html %}
+        
+        <div layout="column" style="flex-grow:1;">
+            
+            {% include header.html %}
+            
+            <md-content>
+                
+                <div class="page-content">
+                    <div class="wrapper">
+                        {{ content }}
+                    </div>
+                </div>
+                
+                {% include footer.html %}
+                
+            </md-content>
+        </div>
+    </body>
+</html>

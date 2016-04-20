@@ -36,7 +36,7 @@ md-sidenav img {
     max-height: 100%;
 }
 
-md-content {
+body, md-content {
     background-color: #f4f4f4;
 }
 

@@ -1,17 +1,8 @@
 var app = angular.module('mannRoboWeb', ['ngMaterial']);
 
 app.controller('MainCtrl', function($scope, $timeout, $mdSidenav, $mdMedia, $log, $http, pageParameters) {
-    
+        
     $scope.params = pageParameters.getParameters();
-    
-//    $http.get("files/pageParamDefaults.json").then(function(response) {
-//        for (key in response.data) {
-//            if (!(key in $scope.params)) { 
-//                $scope.params[key] = response.data[key]
-//                $log.debug($scope.params);
-//            };
-//        };
-//    });
     
     $scope.toggleNav = function(){
         if (!$mdMedia('gt-sm')) {
@@ -74,6 +65,11 @@ app.config(function($mdThemingProvider) {
     .primaryPalette('blue')
     .accentPalette('orange')
     .warnPalette('red');
+});
+
+app.config(function($interpolateProvider) {
+    $interpolateProvider.startSymbol('[[');
+    $interpolateProvider.endSymbol(']]');
 });
 
 //app.config(function($mdThemingProvider) {

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html ng-cloak ng-app="mannRoboWeb" ng-controller="MainCtrl" lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Chrome Mobile Customization -->
+        <meta name="theme-color" content="#2196F3">
+        <meta name="mobile-web-app-capable" content="yes">
+        <link rel="manifest" href="files/manifest.json">
+        
+        <meta charset="utf-8">
+        <!-- Angular Material style sheet -->
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        
+        <!-- Custom Styling -->
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="icon" href="favicon.ico">
+        
+        <!-- jQuery Library -->
+        <script src="js/jquery-2.1.4.min.js"></script>
+        
+        <!-- Angular Material requires Angular.js Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+        
+        <!-- Load the headings. -->
+        <!--<script src="js/ajax_headings.js"></script>-->
+
+        <!-- Angular Material Library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
+        
+        <!-- Your application bootstrap  -->
+        <script src="js/angularBootstrap.js"></script>
+        <script>
+            app.service('pageParameters', function(pageParamCheck) {
+                return {
+                    getParameters: function() {
+                        return pageParamCheck.validate({
+                            pageTitle: "Home",
+                            titleInTab: false,
+                            hideBack: true,
+                            hideMenu: false
+                        });
+                    }
+                };
+            });
+        </script>
+        
+        
+        <!-- Google Analytics -->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            
+            ga('create', 'UA-76523336-1', 'auto');
+            ga('send', 'pageview');
+
+        </script>
+        
+<!--        <title ng-bind="('Mann Robotics' + (params.titleInTab ? (': ' + params.pageTitle) : ''))">-->
+        <title ng-bind="('Mann Robotics' + (params.titleInTab ? ': ' + params.pageTitle : ''))">
+            Mann Robotics
+        </title>
+    </head>
+    <body ng-cloak layout="row">
+        <div id="burgerMenu" layout="row" md-swipe-left="toggleNav();">
+            <md-sidenav class="md-sidenav-left md-whiteframe-8dp" 
+                        md-component-id="left" layout="column" 
+                        md-is-locked-open="$mdMedia('gt-sm')">
+<!--                        layout-align="none stretch">-->
+                <div ng-controller="menuCtrl" layout="column" layout-align="none stretch" style="height: 100%">
+                    <md-toolbar class="md-tall md-hue-2" style="overflow: hidden;" layout-align="center center">
+                        <div layout="column" class="md-tooldbar-tools-bottom inset" layout-align="center center">
+                            <img src="img/mann_logo72.png">
+                            <h2>Mann Robotics</h2>
+                        </div>
+                    </md-toolbar>
+                    <div layout="column" layout-align="space-between none" style="height: 100%">
+                        <div>
+                            <md-list>
+                                <md-list-item ng-repeat='item in menu' ng-href="{{item.href}}" aria-label="{{item.text}}" 
+                                              layout="column" layout-align="center center">
+                                    <div flex layout="row" layout-align="none center" layout-wrap>
+                                        <md-icon flex=15 class="material-icons">{{ item.icon }}</md-icon>
+                                        <span flex=85>{{ item.text }}</span>
+                                    </div>
+                                </md-list-item>
+                            </md-list>
+                        </div>
+                        <div>
+                            <md-divider></md-divider>
+                            <md-list style="max-height: ">
+                                <md-list-item aria-label="Contact Us" ng-href="contact.html">
+                                    <div flex layout="row" layout-wrap>
+                                        <md-icon flex=15 class="material-icons">email</md-icon>
+                                        <span flex=85>Contact Us</span>
+                                    </div>
+                                </md-list-item>
+                                <md-list-item aria-label="Settings" ng-click="settingsHandler();">
+                                    <div flex layout="row" layout-wrap>
+                                        <md-icon flex=15 class="material-icons">settings</md-icon>
+                                        <span flex=85>Settings</span>
+                                    </div>
+                                </md-list-item>
+                            </md-list>
+                        </div>
+                    </div>
+                </div>
+            </md-sidenav>
+        </div>
+        <div layout="column" style="flex-grow:1;">
+<!--                <md-toolbar style="position:fixed;" flex>-->
+            <header>
+                <md-toolbar>
+                    <div class="md-toolbar-tools">
+                        <md-button ng-click="browserBack();" class="md-icon-button" 
+                                   aria-label="Back" ng-hide="{{params.hideBack}}">
+                            <md-icon class="material-icons">arrow_back</md-icon>
+                        </md-button>
+                        <md-button ng-click="toggleNav();" class="md-icon-button" 
+                                   aria-label="Menu" hide-gt-sm ng-hide="{{params.hideMenu}}">
+                            <md-icon class="material-icons">menu</md-icon>
+                        </md-button>
+                        <h1>{{params.pageTitle}}</h1>
+                    </div>
+                </md-toolbar>
+            </header>
+
+            <md-content md-swipe-right="toggleNav();">
+                <div class="toolbar-space"></div>
+                <div ng-repeat="t in [0,1,2,3,4,5,6,7,8,9]" layout="row" layout-align="center start">
+                    <div flex layout-fill>
+                        <md-card>
+                            <md-card-title>
+                              <md-card-title-text>
+                                <span class="md-headline">Website Under Construction</span>
+                              </md-card-title-text>
+                            </md-card-title>
+                            <md-card-content>
+                              <p>
+                                This website is in the process of being built.<br>During that time, this website may be incomplete.
+                              </p>
+                            </md-card-content>
+                        </md-card>
+                    </div>
+                </div>
+
+                <md-button ng-click="settingsHandler();">alert</md-button>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br><br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <footer>
+
+                </footer>
+            </md-content>
+        </div>
+    </body>
+</html>

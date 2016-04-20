@@ -1,0 +1,32 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Mann Robotics
+email: bgodfr5236@greenvilleschools.us
+description: > # this means to ignore newlines until "baseurl:"
+  J.L. Mann Robotics is an active VEX Robotics club of two teams.
+  We participate in high-school level VRC every year, and have for
+  the past two seasons.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://mannrobo.github.io" # the base hostname & protocol for your site
+github_username:  bgodfr5236
+
+# Build settings
+markdown: kramdown
+
+# Responsive Design YAML Defaults
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+      hideMenu: false
+      hideBack: true
+      titleInTab: true
