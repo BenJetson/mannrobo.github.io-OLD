@@ -42,7 +42,7 @@ app.service('pageParamCheck', function($log) {
 
 app.controller('menuCtrl', function($scope, $mdSidenav, $mdDialog, $http, $log) {
     
-    $http.get("files/menu.json").then(function(response) {
+    $http.get("https://mannrobo.github.io/files/menu.json").then(function(response) {
         $scope.menu = response.data;
     });
     

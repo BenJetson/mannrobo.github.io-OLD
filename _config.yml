@@ -13,7 +13,7 @@ description: > # this means to ignore newlines until "baseurl:"
   We participate in high-school level VRC every year, and have for
   the past two seasons.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://mannrobo.github.io" # the base hostname & protocol for your site
+url: "https://mannrobo.github.io/" # the base hostname & protocol for your site
 github_username:  bgodfr5236
 
 # Build settings
@@ -29,4 +29,12 @@ defaults:
       layout: "default"
       hideMenu: false
       hideBack: true
+      titleInTab: true
+  -
+    scope:
+      path: "/news/"
+    values:
+      layout: "newspost"
+      hideMenu: true
+      hideBack: false
       titleInTab: true
