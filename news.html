@@ -1,0 +1,32 @@
+---
+layout: "default"
+title: "News"
+---
+
+<md-card>
+    <md-card-title>
+        <md-card-title-text>
+            <span class="md-headline">Posts</span>
+        </md-card-title-text>
+    </md-card-title>
+    <md-card-content>
+        <md-list>
+            {% for post in site.posts %}
+                <md-list-item ng-href="{{post.url}}" aria-label="{{post.title}}" class="md-2-line">
+<!--
+                    <div class="md-avatar" layout="column" style="line-height: 1.2; text-align: center;">
+                        <span>{{ post.date | date: "%-d" }}</span>
+                        <span style="font-size: 14px;clear: both; color: rgba(0,0,0,0.54);">
+                            {{ post.date | date: "%b" }}
+                        </span>
+                    </div>
+-->
+                    <div class="md-list-item-text">
+                        <h3>{{post.title}}</h3>
+                        <p>{{post.date | date: "%d %B %Y"}}</p>
+                    </div>
+                </md-list-item>
+            {% endfor %}
+        </md-list>
+    </md-card-content>
+</md-card>

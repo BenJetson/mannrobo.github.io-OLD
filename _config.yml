@@ -15,6 +15,8 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://mannrobo.github.io/" # the base hostname & protocol for your site
 github_username:  bgodfr5236
+gems: [jekyll-paginate]
+paginate: 10
 
 # Build settings
 markdown: kramdown
@@ -30,11 +32,11 @@ defaults:
       hideMenu: false
       hideBack: true
       titleInTab: true
-  -
-    scope:
-      path: "/news/"
-    values:
-      layout: "newspost"
-      hideMenu: true
-      hideBack: false
-      titleInTab: true
+#  -
+#    scope:
+#      path: "/news/"
+#    values:
+#      layout: "post"
+#      hideMenu: true
+#      hideBack: false
+#      titleInTab: true

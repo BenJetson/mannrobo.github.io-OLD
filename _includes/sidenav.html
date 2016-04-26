@@ -13,13 +13,15 @@
             <div layout="column" layout-align="space-between none" style="height: 100%">
                 <div>
                     <md-list>
-                        <md-list-item ng-repeat='item in menu' ng-href="[[item.href]]" aria-label="[[item.text]]" 
+                        {% for item in site.data.menu %}
+                        <md-list-item ng-href="{{ site.url }}{{ item['href'] }}" aria-label="{{ item['text'] }}" 
                                       layout="column" layout-align="center center">
                             <div flex layout="row" layout-align="none center" layout-wrap>
-                                <md-icon flex=15 class="material-icons">[[ item.icon ]]</md-icon>
-                                <span flex=85>[[ item.text ]]</span>
+                                <md-icon flex=15 class="material-icons">{{ item['icon'] }}</md-icon>
+                                <span flex=85>{{ item['text'] }}</span>
                             </div>
                         </md-list-item>
+                        {% endfor %}
                     </md-list>
                 </div>
                 <div>
