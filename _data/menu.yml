@@ -1,34 +1,33 @@
 ---
 - 
   text: Home
-  href: index.html
   icon: home
 
 - 
   text: About Us
-  href: about.html
+  href: about
   icon: people
 
 - 
   text: Gallery
-  href: gallery.html
+  href: gallery
   icon: photo
 
 #- 
 #  text: News
-#  href: news.html
+#  href: news
 #  icon: chrome_reader_mode
 -
   text: Updates
-  href: news.html
+  href: udpates
   icon: announcement
 
 - 
   text: Calendar
-  href: calendar.html
+  href: calendar
   icon: today
 
 - 
   text: Resources
-  href: resources.html
+  href: resources
   icon: book
