@@ -4,7 +4,7 @@
     "start_url": "index.html",
     "display": "standalone",
     "icons": [{
-        "src": "iimg/mann_logo48.png",
+        "src": "img/mann_logo48.png",
         "sizes": "48x48",
         "type": "image/png"
     }, {
