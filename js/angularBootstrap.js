@@ -18,6 +18,20 @@ app.controller('MainCtrl', function($scope, $timeout, $mdSidenav, $mdMedia, $log
     
 });
 
+app.service('alertHandler', function($mdDialog) {
+    return {
+        show: function(alertBody, alertTitle, buttonText) {
+            $mdDialog.show(
+                $mdDialog.alert({
+                    title: alertTitle,
+                    textContent: alertBody,
+                    ok: buttonText
+                })
+            );
+        }
+    }
+});
+
 app.service('pageParamCheck', function($log) {
     return {
         validate: function(currentParameters) {
