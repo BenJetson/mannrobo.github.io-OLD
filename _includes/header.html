@@ -1,15 +1,14 @@
-<header>
-    <md-toolbar>
-        <div class="md-toolbar-tools">
-            <md-button ng-click="browserBack();" class="md-icon-button" 
-                       aria-label="Back" ng-hide="{{page.hideBack}}">
-                <md-icon class="material-icons">arrow_back</md-icon>
-            </md-button>
-            <md-button ng-click="toggleNav();" class="md-icon-button" 
-                       aria-label="Menu" hide-gt-sm ng-hide="{{page.hideMenu}}">
-                <md-icon class="material-icons">menu</md-icon>
-            </md-button>
-            <h1>{{page.title}}</h1>
-        </div>
-    </md-toolbar>
+<header>  
+   <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
 </header>
