@@ -1,9 +1,11 @@
-<header>  
-   <nav class="light-blue lighten-1" role="navigation">
+<div class="navbar-fixed">
+   <nav class="blue lighten-1" role="navigation">
     <div class="nav-wrapper container">
         <a id="logo-container" href="{{ site.url }}" class="brand-logo">
-            <img src="{{ 'img/logo.png' | prepend: site.url }}" alt="Mann Robotics Logo"
-                 class="brand-logo-img">
+            <img src="{{ 'img/logo-ext.png' | prepend: site.url }}" 
+                 alt="Mann Robotics Logo" class=" site-logo-rg hide-on-small-only">
+            <img src="{{ 'img/logo.png' | prepend: site.url }}"
+                 alt="Mann Robotics Logo" class="site-logo-sm hide-on-med-and-up">
         </a>
         <ul class="right hide-on-med-and-down">
             <li><a href="{{site.url}}">Home</a></li>
@@ -17,4 +19,4 @@
         </a>
     </div>
   </nav>
-</header>
+</div>
