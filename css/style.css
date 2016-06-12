@@ -1,0 +1,19 @@
+/*
+* {
+    box-sizing: border-box;
+}
+*/
+
+.site-logo-sm,
+.site-logo-rg {
+    display: block;
+    margin-top: 5px;
+}
+
+.site-logo-sm {
+    height: 45px;
+}
+
+.site-logo-rg {
+    height: 52px;
+}
