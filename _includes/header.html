@@ -9,10 +9,30 @@
         </a>
         <ul class="right hide-on-med-and-down">
             <li><a href="{{site.url}}">Home</a></li>
+            {% for item in site.data.navigation %}
+                <li><a href="{{ item.href | prepend: site.url}}">{{ item.text }}</a></li>
+            {% endfor %}
         </ul>
 
         <ul id="nav-mobile" class="side-nav">
-            <li><a href="#">Navbar Link</a></li>
+            <li>
+                <a href="{{site.url}}">
+                    <div class="row">
+                        <div class="col s3"><i class="material-icons">home</i></div>
+                        <div class="col s9">Home</div>
+                    </div>
+                </a>
+            </li>
+            {% for item in site.data.navigation %}
+                <li>
+                    <a href="{{ item.href | prepend: site.url}}">
+                        <div class="row">
+                            <div class="col s3"><i class="material-icons">{{ item.icon }}</i></div>
+                            <div class="col s9 valign-wrapper">{{ item.text }}</div>
+                        </div>
+                    </a>
+                </li>
+            {% endfor %}
         </ul>
         <a href="#" data-activates="nav-mobile" class="button-collapse">
             <i class="material-icons">menu</i>
