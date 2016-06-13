@@ -8,6 +8,11 @@
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}">
     <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
     
+    <!-- Chrome Mobile Customization -->
+    <meta name="theme-color" content="#2196F3">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="manifest" href="{{ '/files/manifest.json' | prepend: site.url }}">
+    
     <!-- Web Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
