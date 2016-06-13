@@ -31,8 +31,6 @@ defaults:
       path: ""
     values:
       layout: "default"
-      hideMenu: false
-      hideBack: true
       titleInTab: true
   -
     scope:
@@ -40,6 +38,4 @@ defaults:
     values:
       category: "updates"
       layout: "post"
-      hideMenu: true
-      hideBack: false
       titleInTab: true
