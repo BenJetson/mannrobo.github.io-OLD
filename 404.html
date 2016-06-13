@@ -4,12 +4,17 @@ title: 404
 permalink: /404.html
 ---
 
-<div style="text-align: center;">
-    
-    <h1>That's a <b>404</b>.</h1>
-    
-    <p>The page you're looking for does not exist on this server.</p>
-    <p>The file may have been moved or erased by a site admin.</p>
-    <p>However, you can still visit some of our other awesome pages in the sidebar to the left.</p>
-    
+<div class="section">
+    <div class="container center">
+        <div class="col s12">
+            <br>
+            <div style="font-size: 95px;" class="material-icons">error</div>
+            <h1>That's a <b>404</b>.</h1>
+            <p>We couldn't find the resource you requested.</p>
+            <p>If you think this is a mistake, you can <a href="{{ 'contact' | prepend: site.url }}">contact us</a>.</p>
+            <br>
+            <a class="waves-effect waves-light btn-large"
+               href="{{ site.url }}">Return to Homepage</a>
+        </div>
+    </div>
 </div>
