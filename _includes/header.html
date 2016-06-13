@@ -1,22 +1,22 @@
 <div class="navbar-fixed">
    <nav class="blue lighten-1" role="navigation">
     <div class="nav-wrapper container">
-        <a id="logo-container" href="{{ site.url }}" class="brand-logo">
+        <a id="logo-container" href="{{ site.url }}" class="brand-logo waves-effect waves-light">
             <img src="{{ 'img/logo-ext.png' | prepend: site.url }}" 
                  alt="Mann Robotics Logo" class=" site-logo-rg hide-on-small-only">
             <img src="{{ 'img/logo.png' | prepend: site.url }}"
                  alt="Mann Robotics Logo" class="site-logo-sm hide-on-med-and-up">
         </a>
         <ul class="right hide-on-med-and-down">
-            <li><a href="{{site.url}}">Home</a></li>
+            <li><a class="waves-effect waves-light" href="{{site.url}}">Home</a></li>
             {% for item in site.data.navigation %}
-                <li><a href="{{ item.href | prepend: site.url}}">{{ item.text }}</a></li>
+                <li><a class="waves-effect waves-light" href="{{ item.href | prepend: site.url}}">{{ item.text }}</a></li>
             {% endfor %}
         </ul>
 
         <ul id="nav-mobile" class="side-nav">
             <li>
-                <a href="{{site.url}}">
+                <a class="waves-effect" href="{{site.url}}">
                     <div class="row">
                         <div class="col s3"><i class="material-icons">home</i></div>
                         <div class="col s9">Home</div>
@@ -25,7 +25,7 @@
             </li>
             {% for item in site.data.navigation %}
                 <li>
-                    <a href="{{ item.href | prepend: site.url}}">
+                    <a class="waves-effect" href="{{ item.href | prepend: site.url}}">
                         <div class="row">
                             <div class="col s3"><i class="material-icons">{{ item.icon }}</i></div>
                             <div class="col s9 valign-wrapper">{{ item.text }}</div>
