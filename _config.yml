@@ -13,7 +13,7 @@ description: > # this means to ignore newlines until "baseurl:"
   We participate in high-school level VRC every year, and have for
   the past two seasons.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https:://mannrobo.github.io/" # for when hosted online at gh-pages
+url: "https://mannrobo.github.io/" # for when hosted online at gh-pages
 #url: "http://127.0.0.1:4000/" # for when editing with a local jekyll server
 github_username: mannrobo
 gems: [jekyll-paginate]
