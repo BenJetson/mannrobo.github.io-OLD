@@ -2,9 +2,9 @@
    <nav class="blue lighten-1" role="navigation">
     <div class="nav-wrapper container">
         <a id="logo-container" href="{{ site.url }}" class="brand-logo waves-effect waves-light">
-            <img src="{{ 'img/logo-ext.png' | prepend: site.url }}" 
+            <img src="{{ 'img/logo-ext-sm.png' | prepend: site.url }}" 
                  alt="Mann Robotics Logo" class=" site-logo-rg hide-on-small-only">
-            <img src="{{ 'img/logo.png' | prepend: site.url }}"
+            <img src="{{ 'img/logo-sm.png' | prepend: site.url }}"
                  alt="Mann Robotics Logo" class="site-logo-sm hide-on-med-and-up">
         </a>
         <ul class="right hide-on-med-and-down">
@@ -15,6 +15,9 @@
         </ul>
 
         <ul id="nav-mobile" class="side-nav">
+            <div class="card-panel blue lighten-2" style="margin-top: 0; height: 150px;">
+                <img class="responsive-img" src="{{'img/logo.png' | prepend: site.url}}">
+            </div>
             <li>
                 <a class="waves-effect" href="{{site.url}}">
                     <div class="row">
