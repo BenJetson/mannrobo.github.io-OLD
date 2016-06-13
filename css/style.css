@@ -1,3 +1,8 @@
+.site-logo {
+    display: block;
+    padding: 5px;
+}
+
 @media all and (display-mode: standalone) {
     /* Here goes the CSS rules that will only apply if app is running standalone */
 }
