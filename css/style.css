@@ -3,6 +3,13 @@
     padding: 5px;
 }
 
+@font-face {
+    font-family: 'custom-icons';
+    src: url('https://mannrobo.github.io/fonts/customicons.ttf?kyde40') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 @media all and (display-mode: standalone) {
     /* Here goes the CSS rules that will only apply if app is running standalone */
 }
