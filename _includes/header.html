@@ -8,7 +8,7 @@
                  alt="Mann Robotics Logo" class="responsive-img site-logo hide-on-med-and-up" style="height: 56px;">
         </a>
         <ul class="right hide-on-med-and-down">
-            <li><a class="waves-effect waves-light" href="{{site.url}}">Home</a></li>
+<!--            <li><a class="waves-effect waves-light" href="{{site.url}}">Home</a></li>-->
             {% for item in site.data.navigation %}
                 <li><a class="waves-effect waves-light" href="{{ item.href | prepend: site.url}}">{{ item.text }}</a></li>
             {% endfor %}
@@ -37,8 +37,11 @@
                 </li>
             {% endfor %}
         </ul>
-        <a href="#" data-activates="nav-mobile" class="button-collapse">
-            <i class="material-icons">menu</i>
+        <a href="#" data-activates="nav-mobile" class="button-collapse waves-effect waves-light">
+            <i class="material-icons" style="font-size: 2rem;">menu</i>
+        </a>
+        <a href="#" data-activates="nav-mobile" class="waves-effect waves-light" id="app-backbtn">
+            <i class="material-icons" style="font-size: 2rem;">arrow_back</i>
         </a>
     </div>
   </nav>

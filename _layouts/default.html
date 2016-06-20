@@ -8,13 +8,18 @@
     {% include header.html %}
 
     <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
+        <div class="wrapper">
+            {{ content }}
+        </div>
     </div>
 
     {% include footer.html %}
-
+    
+    <script>
+        if (!(window.matchMedia('(display-mode: standalone)').matches)) {
+            $('#app-backbtn').addClass("hide");
+        }
+    </script>
   </body>
 
 </html>
