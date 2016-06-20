@@ -12,6 +12,7 @@
 
 .custom-icons {
     font-family: "custom-icons";
+    font-style: normal;
 }
 
 @media all and (display-mode: standalone) {
