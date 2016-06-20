@@ -16,10 +16,33 @@
     {% include footer.html %}
     
     <script>
+        // Page initialization script.
+        
         if (!(window.matchMedia('(display-mode: standalone)').matches)) {
-            $('#app-backbtn').addClass("hide");
+            $('#app-backbtn').addClass("hide"); 
+            // Hides the back button if not running as standalone
+            //    web application.
         }
+        
+        
+        // Materialize CSS Library Initializations
+        $(document).ready(function(){
+            {% if page.parallax %}$('.parallax').parallax();{% endif %} 
+                // Initialize Parallax if page requests it
+            
+            {% if page.parallax %}$('.materialboxed').materialbox();{% endif %} 
+                // Initialize Materialbox if page requests it
+            
+            {% if page.collapsible %}$('.collapsible').collapsible();{% endif %}
+                // Initialize Collapsible if page requests it.
+            
+            return false; 
+                // This statement just prevents an empty function
+                //    exception in the event a page requests none
+                //    of these attributes.
+        });
     </script>
+    
   </body>
 
 </html>
