@@ -18,8 +18,10 @@ url: "https://mannrobo.github.io/" # for when hosted online at gh-pages
 github_username: mannrobo
 gems: [jekyll-paginate]
 paginate: 10
+timezone: America/New_York
+safe: true
 paginate_path: "/updates/page:num"
-permalink: pretty
+permalink: 	/updates/:year/:month/:day/:title/
 
 # Build settings
 markdown: kramdown
@@ -31,7 +33,7 @@ defaults:
       path: ""
     values:
       layout: "default"
-      titleInTab: true
+      hideBack: false
   -
     scope:
       path: "_posts/updates/"
