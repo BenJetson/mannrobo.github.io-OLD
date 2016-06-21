@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/mannrobo/mannrobo.github.io.png?label=ready&title=Ready)](https://waffle.io/mannrobo/mannrobo.github.io)
 # mannrobo.github.io
 
 This repository contains the website for our club.
