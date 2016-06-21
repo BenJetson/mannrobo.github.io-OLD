@@ -20,6 +20,10 @@ img.center-img {
     margin: 0 auto;
 }
 
+img.gallery-img {
+    margin-bottom: 20px;
+}
+
 @media all and (display-mode: standalone) {
     /* Here goes the CSS rules that will only apply if app is running standalone */
 }

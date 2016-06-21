@@ -1,0 +1,20 @@
+---
+permalink: /gallery
+materialboxed: true
+---
+<div class="section">
+    <div class="container gallery-container">
+        <div class="row">
+            <h2 class="center-align">Gallery</h2>
+        </div>
+        <div class="row">
+        {% for item in site.data.gallery %}
+            <div class="col s12 m6 l3">
+                <img class="responsive-img center-img gallery-img materialboxed" 
+                     src="{{ item.src }}" alt="{{ item.caption }}" 
+                     data-caption="{{ item.caption }}" data-lightbox="gallery">
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+</div>
