@@ -18,12 +18,15 @@
     <script>
         // Page initialization script.
         
-        if (!(window.matchMedia('(display-mode: standalone)').matches)) {
-            $('#app-backbtn').addClass("hide"); 
-            {% comment %}
-                // Hides the back button if not running
-                //    as a standalone web application.
-            {% endcomment %}
+        hideBack = {% if page.hideBack == true or page.hideBack == false %}{{page.hideBack}}{% else %}false{% endif %};
+        isStandalone = (window.matchMedia('(display-mode: standalone)').matches);
+        
+        if (!isStandalone) {
+            $("#app-backbtn").addClass("hide"); 
+        } else if (hideBack) {
+            $("#app-backbtn").addClass("hide"); 
+        } else {
+            $("#app-navbtn").addClass("hide");
         }
         
         
