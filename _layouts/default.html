@@ -20,26 +20,27 @@
         
         if (!(window.matchMedia('(display-mode: standalone)').matches)) {
             $('#app-backbtn').addClass("hide"); 
-            // Hides the back button if not running as standalone
-            //    web application.
+            {% comment %}
+                // Hides the back button if not running
+                //    as a standalone web application.
+            {% endcomment %}
         }
         
         
         // Materialize CSS Library Initializations
         $(document).ready(function(){
             {% if page.parallax %}$('.parallax').parallax();{% endif %} 
-                // Initialize Parallax if page requests it
-            
-            {% if page.parallax %}$('.materialboxed').materialbox();{% endif %} 
-                // Initialize Materialbox if page requests it
-            
+                {% comment %} Initialize Parallax if page requests it {% endcomment %}
+            {% if page.materialbox %}$('.materialboxed').materialbox();{% endif %}
+                {% comment %} Initialize Materialbox if page requests it {% endcomment %}
             {% if page.collapsible %}$('.collapsible').collapsible();{% endif %}
-                // Initialize Collapsible if page requests it.
-            
+                {% comment %} Initialize Collapsible if page requests it. {% endcomment %}
             return false; 
+            {% comment %}
                 // This statement just prevents an empty function
                 //    exception in the event a page requests none
                 //    of these attributes.
+            {% endcomment %}
         });
     </script>
     

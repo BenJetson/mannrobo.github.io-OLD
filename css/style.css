@@ -15,6 +15,11 @@
     font-style: normal;
 }
 
+img.center-img {
+    display: block;
+    margin: 0 auto;
+}
+
 @media all and (display-mode: standalone) {
     /* Here goes the CSS rules that will only apply if app is running standalone */
 }
