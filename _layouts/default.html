@@ -37,17 +37,10 @@
             // Materialize CSS Library Initializations
             $(document).ready(function(){
                 {% if page.parallax %}$('.parallax').parallax();{% endif %} 
-                    {% comment %} Initialize Parallax if page requests it {% endcomment %}
                 {% if page.materialbox %}$('.materialboxed').materialbox();{% endif %}
-                    {% comment %} Initialize Materialbox if page requests it {% endcomment %}
                 {% if page.collapsible %}$('.collapsible').collapsible();{% endif %}
-                    {% comment %} Initialize Collapsible if page requests it. {% endcomment %}
-                return false; 
-                {% comment %}
-                    // This statement just prevents an empty function
-                    //    exception in the event a page requests none
-                    //    of these attributes.
-                {% endcomment %}
+                $(".button-collapse").sideNav();
+                $(".dropdown-button").dropdown();
             });
         </script>
         
