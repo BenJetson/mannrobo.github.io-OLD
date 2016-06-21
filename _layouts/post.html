@@ -3,35 +3,41 @@ layout: default
 materialboxed: true
 ---
 <div class="container">
-    <div class="row">
+    <div class="row post-meta">
         <div class="col s12">
             <h4>{{page.title}}</h4>
+    <!--
         </div>
-        <div class="col s12">
-            Posted on <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time> by 
-            {% assign authorName = "Unknown" %}
-            {% assign authorUsername = 'nobody' %}
-            {% if page.author %}
-            {% for author in site.data.authors %}
-                {% if author.username == page.author and author.name %}
-                    {% assign authorName = author.name %}
-                    {% assign authorUsername = author.username %}
+        <div class="row">
+    -->
+            <div>
+                Posted on <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time> by 
+                {% assign authorName = "Unknown" %}
+                {% assign authorUsername = 'nobody' %}
+                {% if page.author %}
+                {% for author in site.data.authors %}
+                    {% if author.username == page.author and author.name %}
+                        {% assign authorName = author.name %}
+                        {% assign authorUsername = author.username %}
+                    {% endif %}
+                {% endfor %}
                 {% endif %}
-            {% endfor %}
-            {% endif %}
-            <div class="chip">
-                <img src="{{site.url}}img/authors/{{authorUsername}}.jpg" alt="{{authorName}}">
-                {{authorName}}
+                <div class="chip">
+                    <img src="{{site.url}}img/authors/{{authorUsername}}.jpg" alt="{{authorName}}">
+                    {{authorName}}
+                </div>
             </div>
+            {% if page.tags.size > 0 %}
+            <div>
+                Tagged 
+                {% for post-tag in page.tags %}
+                <div class="chip">{{post-tag}}</div>
+                {% endfor %}
+            </div>
+            {% endif %}
         </div>
-        {% if page.tags.size > 0 %}
-        <div class="col s12">
-            Tagged 
-            {% for post-tag in page.tags %}
-            <div class="chip">{{post-tag}}</div>
-            {% endfor %}
-        </div>
-        {% endif %}
+    </div>
+    <div class="row">
         <div class="col s12">
             {{content}}
         </div>

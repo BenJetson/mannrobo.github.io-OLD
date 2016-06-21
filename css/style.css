@@ -24,9 +24,14 @@ img.gallery-img {
     margin-bottom: 20px;
 }
 
-div.post-meta div.chip,
-div.post-meta div.post-date {
-    margin-bottom: 5px;
+div.post-meta div.chip {
+    margin-bottom: 7px;
+}
+
+div.post-meta {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 0px;
 }
 
 @media all and (display-mode: standalone) {
