@@ -1,55 +1,56 @@
 <!DOCTYPE html>
+
 <html>
-
-  {% include head.html %}
-
-  <body>
-
-    {% include header.html %}
-
-    <div class="page-content">
-        <div class="wrapper">
-            {{ content }}
+    
+    {% include head.html %}
+    
+    <body>
+        
+        {% include header.html %}
+        
+        <div class="page-content">
+            <div class="wrapper">
+                {{ content }}
+            </div>
         </div>
-    </div>
-
-    {% include footer.html %}
+        
+        {% include footer.html %}
+        
+        <script>
+            // Page initialization script.
+            
+            hideBack = {% if page.hideBack == true or page.hideBack == false %}{{page.hideBack}}{% else %}false{% endif %};
+            isStandalone = (window.matchMedia('(display-mode: standalone)').matches);
+            
+            if (!isStandalone) {
+                $("#app-navbtn").removeClass("hide"); 
+            } else if (hideBack) {
+                $("#app-navbtn").removeClass("hide");
+            } else {
+                $("#app-backbtn").removeClass("hide"); 
+            }
+            
+            if (isStandalone) {
+                $("#app-navfix").addClass("navbar-fixed");
+            }
+            
+            // Materialize CSS Library Initializations
+            $(document).ready(function(){
+                {% if page.parallax %}$('.parallax').parallax();{% endif %} 
+                    {% comment %} Initialize Parallax if page requests it {% endcomment %}
+                {% if page.materialbox %}$('.materialboxed').materialbox();{% endif %}
+                    {% comment %} Initialize Materialbox if page requests it {% endcomment %}
+                {% if page.collapsible %}$('.collapsible').collapsible();{% endif %}
+                    {% comment %} Initialize Collapsible if page requests it. {% endcomment %}
+                return false; 
+                {% comment %}
+                    // This statement just prevents an empty function
+                    //    exception in the event a page requests none
+                    //    of these attributes.
+                {% endcomment %}
+            });
+        </script>
+        
+    </body>
     
-    <script>
-        // Page initialization script.
-        
-        hideBack = {% if page.hideBack == true or page.hideBack == false %}{{page.hideBack}}{% else %}false{% endif %};
-        isStandalone = (window.matchMedia('(display-mode: standalone)').matches);
-        
-        if (!isStandalone) {
-            $("#app-navbtn").removeClass("hide"); 
-        } else if (hideBack) {
-            $("#app-navbtn").removeClass("hide");
-        } else {
-            $("#app-backbtn").removeClass("hide"); 
-        }
-        
-        if (isStandalone) {
-            $("#app-navfix").addClass("navbar-fixed");
-        }
-        
-        // Materialize CSS Library Initializations
-        $(document).ready(function(){
-            {% if page.parallax %}$('.parallax').parallax();{% endif %} 
-                {% comment %} Initialize Parallax if page requests it {% endcomment %}
-            {% if page.materialbox %}$('.materialboxed').materialbox();{% endif %}
-                {% comment %} Initialize Materialbox if page requests it {% endcomment %}
-            {% if page.collapsible %}$('.collapsible').collapsible();{% endif %}
-                {% comment %} Initialize Collapsible if page requests it. {% endcomment %}
-            return false; 
-            {% comment %}
-                // This statement just prevents an empty function
-                //    exception in the event a page requests none
-                //    of these attributes.
-            {% endcomment %}
-        });
-    </script>
-    
-  </body>
-
 </html>
