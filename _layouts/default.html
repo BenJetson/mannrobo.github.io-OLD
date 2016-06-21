@@ -22,11 +22,11 @@
         isStandalone = (window.matchMedia('(display-mode: standalone)').matches);
         
         if (!isStandalone) {
-            $("#app-backbtn").addClass("hide"); 
+            $("#app-navbtn").removeClass("hide"); 
         } else if (hideBack) {
-            $("#app-backbtn").addClass("hide"); 
+            $("#app-navbtn").removeClass("hide");
         } else {
-            $("#app-navbtn").addClass("hide");
+            $("#app-backbtn").removeClass("hide"); 
         }
         
         

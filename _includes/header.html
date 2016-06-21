@@ -37,12 +37,11 @@
                 </li>
             {% endfor %}
         </ul>
-        <script>console.log(">{{page.hideBack}}");</script>
         <a href="#" data-activates="nav-mobile" id="app-navbtn"
-           class="button-collapse waves-effect waves-light">
+           class="button-collapse waves-effect waves-light hide">
             <i class="material-icons" style="font-size: 2rem;">menu</i>
         </a>
-        <a href="#" class="waves-effect waves-light" id="app-backbtn" 
+        <a href="#" class="waves-effect waves-light hide" id="app-backbtn" 
            onclick="if (1 < history.length && document.referrer) {window.history.back();} else {window.location.href = '{{site.url}}';}">
             <i class="material-icons" style="font-size: 2rem;">arrow_back</i>
         </a>
