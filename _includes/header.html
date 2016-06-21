@@ -41,7 +41,7 @@
             <i class="material-icons" style="font-size: 2rem;">menu</i>
         </a>
         <a href="#" class="waves-effect waves-light" id="app-backbtn" 
-           onclick="if (document.referrer == '') {window.location.href = '{{site.url}}';} else {window.history.back();}">
+           onclick="if ((1 < history.length) && document.referrer)) {window.history.back();} else {window.location.href = '{{site.url}}';}">
             <i class="material-icons" style="font-size: 2rem;">arrow_back</i>
         </a>
     </div>
