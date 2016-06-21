@@ -36,11 +36,11 @@
             
             // Materialize CSS Library Initializations
             $(document).ready(function(){
-                {% if page.parallax %}$('.parallax').parallax();{% endif %} 
-                {% if page.materialbox %}$('.materialboxed').materialbox();{% endif %}
-                {% if page.collapsible %}$('.collapsible').collapsible();{% endif %}
-                $(".button-collapse").sideNav();
-                $(".dropdown-button").dropdown();
+                {% if page.parallax %}$('.parallax').parallax(); // Parallax initialization{% else %}// Parallax not requested.{% endif %} 
+                {% if page.materialbox %}$('.materialboxed').materialbox(); // Materialbox initialization{% else %}// Materialbox not requested.{% endif %}
+                {% if page.collapsible %}$('.collapsible').collapsible(); // Collapsible initialization{% else %}// Collapsible not requested.{% endif %}
+                $(".button-collapse").sideNav(); // Sidenav button initialization
+                $(".dropdown-button").dropdown(); // Dropdown buttons initialization
             });
         </script>
         
