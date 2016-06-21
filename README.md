@@ -6,6 +6,9 @@ Our awesome website is currently under construction,
 which is to replace our not-so-nice site over at 
 Google Sites [here](http://sites.greenvilleschools.us/mannrobotics).
 
+## Progress
+You can view the live progress of site development over on the [kanban board](https://trello.com/b/NFdxx5XR).
+
 ## Powered by really great software
 * [GitHub Pages](https://pages.github.com/)
 * [Jekyll](https://jekyllrb.com)
