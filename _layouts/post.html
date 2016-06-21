@@ -2,19 +2,14 @@
 layout: default
 materialboxed: true
 ---
-<!--<div class="section">-->
-    <div class="container">
-        <div class="row post-meta">
-            <div class="col s12">
-                <h4>{{page.title}}</h4>
-            </div>
-            <div class="col s12">
-                <div class="post-date">
-                    Posted: <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
-                </div>
-            </div>
-            <div class="col s12 m4 l3">
-                {% assign authorName = "Unknown" %}
+<div class="container">
+    <ul class="collection">
+        <li class="collection-item">
+            <h4>{{page.title}}</h4>
+        </li>
+        <li class="collection-item">
+            Posted on <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time> by 
+            {% assign authorName = "Unknown" %}
                 {% assign authorUsername = 'nobody' %}
                 {% if page.author %}
                 {% for author in site.data.authors %}
@@ -24,25 +19,21 @@ materialboxed: true
                     {% endif %}
                 {% endfor %}
                 {% endif %}
-                Author:
                 <div class="chip">
                     <img src="{{site.url}}img/authors/{{authorUsername}}.jpg" alt="{{authorName}}">
                     {{authorName}}
                 </div>
-            </div>
-            <div class="col s12 m8 l9">
-                {% if page.tags.size > 0 %}
-                &nbsp;Tags:
-                {% for post-tag in page.tags %}
-                <div class="chip">{{post-tag}}</div>
-                {% endfor %}
-                {% endif %}
-            </div>
-        </div>
-        <div class="row">
-            <div class="col s12">
-                {{content}}
-            </div>
-        </div>
-    </div>
-<!--</div>-->
+        </li>
+        {% if page.tags.size > 0 %}
+        <li class="collection-item">
+            Tagged 
+            {% for post-tag in page.tags %}
+            <div class="chip">{{post-tag}}</div>
+            {% endfor %}
+        </li>
+        {% endif %}
+        <li class="collection-item">
+            {{content}}
+        </li>
+    </ul>
+</div>
