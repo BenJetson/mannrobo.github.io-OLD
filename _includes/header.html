@@ -40,7 +40,8 @@
         <a href="#" data-activates="nav-mobile" class="button-collapse waves-effect waves-light">
             <i class="material-icons" style="font-size: 2rem;">menu</i>
         </a>
-        <a href="#" data-activates="nav-mobile" class="waves-effect waves-light" id="app-backbtn">
+        <a href="#" class="waves-effect waves-light" id="app-backbtn" 
+           onclick="if (document.referrer == "") {window.location.href = '{{site.url}}';} else {window.history.back();}">
             <i class="material-icons" style="font-size: 2rem;">arrow_back</i>
         </a>
     </div>
