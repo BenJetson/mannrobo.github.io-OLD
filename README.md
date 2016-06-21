@@ -8,7 +8,7 @@ which is to replace our not-so-nice site over at
 Google Sites [here](http://sites.greenvilleschools.us/mannrobotics).
 
 ## Progress
-You can view the live progress of site development over on the [kanban board](https://trello.com/b/NFdxx5XR).
+You can view the live progress of site development over on the [waffle.io kanban board](https://waffle.io/mannrobo/mannrobo.github.io/).
 
 ## Powered by really great software
 * [GitHub Pages](https://pages.github.com/)
