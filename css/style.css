@@ -24,6 +24,11 @@ img.gallery-img {
     margin-bottom: 20px;
 }
 
+div.post-meta div.chip,
+div.post-meta div.post-date {
+    margin-bottom: 5px;
+}
+
 @media all and (display-mode: standalone) {
     /* Here goes the CSS rules that will only apply if app is running standalone */
 }
