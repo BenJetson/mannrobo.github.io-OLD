@@ -48,6 +48,7 @@ layout: default
     </div>
 </div>
 
+{% if page.autoImg %}
 <script>
     $(document).ready(function() {
         $("div.post-content img").each(function() {
@@ -56,3 +57,4 @@ layout: default
         });
     });
 </script>
+{% endif %}

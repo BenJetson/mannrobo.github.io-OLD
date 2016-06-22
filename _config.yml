@@ -38,8 +38,8 @@ defaults:
       hideBack: false
   -
     scope:
-      path: "_posts/updates/"
+      path: "_posts"
     values:
       category: "updates"
       layout: "post"
-      titleInTab: true
+      autoImg: true
