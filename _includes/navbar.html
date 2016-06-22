@@ -8,23 +8,44 @@
                  alt="Mann Robotics Logo" class="responsive-img site-logo hide-on-med-and-up" style="height: 56px;">
         </a>
         
-        <ul id="nav-more-menu" class="dropdown-content">
-            <li><a class="waves-effect" href="{{site.url}}gallery">Gallery</a></li>
-            <li><a class="waves-effect" href="{{site.url}}calendar">Calendar</a></li>
-            <li><a class="waves-effect" href="{{site.url}}resources">Resources</a></li>
-            <li><a class="waves-effect" href="{{site.url}}contact">Contact Us</a></li>
-        </ul>
-        
         <ul class="right hide-on-med-and-down">
-            <li><a class="waves-effect waves-light" href="{{site.url}}">Home</a></li>
-            <li><a class="waves-effect waves-light" href="{{site.url}}about">About</a></li>
-            <li><a class="waves-effect waves-light" href="{{site.url}}updates">Updates</a></li>
+            {% assign nav-counter = 0 %}
+            {% assign main-link-max = 3 %}
+            {% assign main-link-max = main-link-max | plus: 1 %}
+            {% assign extra-nav-items = "" | split: "" %}
+            
+            {% for item in site.data.navigation %}
+                {% assign nav-counter = nav-counter | plus: 1 %}
+                
+                {% if main-link-max > nav-counter %}
+                    
+                    <li><a class="waves-effect waves-light" href="{{ item.href | prepend: site.url }}">{{item.text}}</a></li>
+                    
+                {% else %}
+                    
+                    {% assign extra-nav-items = extra-nav-items | push: item %}
+                    
+                {% endif %}
+            {% endfor %}
+            
+            {% assign num-extra-items = extra-nav-items | size %}
+            
+            {% if num-extra-items > 1 %}
             <li>
                 <a class="dropdown-button waves-effect waves-light" href="#!" data-activates="nav-more-menu">
                     &nbsp;&nbsp;More<i class="material-icons right">arrow_drop_down</i>
                 </a>
             </li>
+            {% endif %}
         </ul>
+        
+        {% if num-extra-items > 1 %}
+        <ul id="nav-more-menu" class="dropdown-content">
+            {% for item in extra-nav-items %}
+            <li><a class="waves-effect" href="{{ item.href | prepend: site.url }}">{{item.text}}</a></li>
+            {% endfor %}
+        </ul>
+        {% endif %}
 
         <ul id="nav-mobile" class="side-nav">
             <li class="logo blue lighten-2">

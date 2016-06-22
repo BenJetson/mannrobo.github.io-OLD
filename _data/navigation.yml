@@ -8,15 +8,15 @@
   href: about
   icon: people
 
-- 
-  text: Gallery
-  href: gallery
-  icon: photo
-
 -
   text: Updates
   href: updates
   icon: announcement
+
+- 
+  text: Gallery
+  href: gallery
+  icon: photo
 
 - 
   text: Calendar
