@@ -3,6 +3,14 @@
     padding: 5px;
 }
 
+iframe.responsive-yt {
+    display: block;
+    width: 500px;
+    height: 250px;
+    max-width: 100%;
+    margin: 0 auto 15px auto;
+}
+
 @font-face {
     font-family: 'custom-icons';
     src: url('https://mannrobo.github.io/fonts/custom_icons.ttf') format('truetype');

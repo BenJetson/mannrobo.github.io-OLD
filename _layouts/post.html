@@ -38,8 +38,25 @@ materialboxed: true
         </div>
     </div>
     <div class="row">
-        <div class="col s12">
+        <div class="col s12 post-content">
             {{content}}
+            
+            {% if page.yt %}
+            {% for vidID in page.yt %}
+            <iframe id="ytplayer" type="text/html" width=1000 height=400
+                    src="https://www.youtube.com/embed/{{vidID}}" 
+                    frameborder="0" class="responsive-yt"></iframe>
+            {% endfor %}
+            {% endif %}
+            
         </div>
     </div>
 </div>
+
+<script>
+    $(document).ready(function() {
+        $("div.post-content img").each(function() {
+            $(this).addClass("materialboxed");
+        });
+    });
+</script>
