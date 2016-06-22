@@ -3,6 +3,13 @@
     padding: 5px;
 }
 
+img.menu-logo {
+    display: block;
+    margin: 0 auto;
+    padding: 25px 0;
+    width: 170px;
+}
+
 iframe.responsive-yt {
     display: block;
     width: 500px;
@@ -44,6 +51,10 @@ div.post-meta {
     padding-bottom: 10px;
     border-bottom: 1px solid #e0e0e0;
     margin-bottom: 0px;
+}
+
+ul.side-nav li a {
+    height: 50px;
 }
 
 @media all and (display-mode: standalone) {

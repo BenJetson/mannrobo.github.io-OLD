@@ -7,24 +7,28 @@
             <img src="{{ 'img/logo-sm.png' | prepend: site.url }}"
                  alt="Mann Robotics Logo" class="responsive-img site-logo hide-on-med-and-up" style="height: 56px;">
         </a>
+        
+        <ul id="nav-more-menu" class="dropdown-content">
+            <li><a class="waves-effect" href="{{site.url}}gallery">Gallery</a></li>
+            <li><a class="waves-effect" href="{{site.url}}calendar">Calendar</a></li>
+            <li><a class="waves-effect" href="{{site.url}}resources">Resources</a></li>
+            <li><a class="waves-effect" href="{{site.url}}contact">Contact Us</a></li>
+        </ul>
+        
         <ul class="right hide-on-med-and-down">
-<!--            <li><a class="waves-effect waves-light" href="{{site.url}}">Home</a></li>-->
-            {% for item in site.data.navigation %}
-                <li><a class="waves-effect waves-light" href="{{ item.href | prepend: site.url}}">{{ item.text }}</a></li>
-            {% endfor %}
+            <li><a class="waves-effect waves-light" href="{{site.url}}">Home</a></li>
+            <li><a class="waves-effect waves-light" href="{{site.url}}about">About</a></li>
+            <li><a class="waves-effect waves-light" href="{{site.url}}updates">Updates</a></li>
+            <li>
+                <a class="dropdown-button waves-effect waves-light" href="#!" data-activates="nav-more-menu">
+                    &nbsp;&nbsp;More<i class="material-icons right">arrow_drop_down</i>
+                </a>
+            </li>
         </ul>
 
         <ul id="nav-mobile" class="side-nav">
-            <div class="card-panel blue lighten-2" style="margin-top: 0; height: 150px;">
-                <img class="responsive-img" src="{{'img/logo.png' | prepend: site.url}}">
-            </div>
-            <li>
-                <a class="waves-effect" href="{{site.url}}">
-                    <div class="row">
-                        <div class="col s3"><i class="material-icons">home</i></div>
-                        <div class="col s9">Home</div>
-                    </div>
-                </a>
+            <li class="logo blue lighten-2">
+                <img class="responsive-img menu-logo" src="{{'img/logo.png' | prepend: site.url}}">
             </li>
             {% for item in site.data.navigation %}
                 <li>

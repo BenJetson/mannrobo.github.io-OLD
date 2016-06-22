@@ -1,4 +1,8 @@
----
+-
+  text: Home
+  href: 
+  icon: home
+  
 - 
   text: About
   href: about
@@ -24,7 +28,7 @@
   href: resources
   icon: book
 
-#- 
-#  text: Contact
-#  href: contact
-#  icon: email
+- 
+  text: Contact
+  href: contact
+  icon: email
