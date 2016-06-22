@@ -32,6 +32,10 @@ img.gallery-img {
     margin-bottom: 20px;
 }
 
+img.post-img {
+    width: 400px;
+}
+
 div.post-meta div.chip {
     margin-bottom: 7px;
 }
@@ -43,7 +47,7 @@ div.post-meta {
 }
 
 @media all and (display-mode: standalone) {
-    /* Here goes the CSS rules that will only apply if app is running standalone */
+    /* Here goes the CSS rules that will only apply if app is running standalone 
 }
 
 /* Fixes Materialize CSS' error in 

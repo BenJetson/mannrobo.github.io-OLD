@@ -1,15 +1,10 @@
 ---
 layout: default
-materialboxed: true
 ---
 <div class="container">
     <div class="row post-meta">
         <div class="col s12">
             <h4>{{page.title}}</h4>
-    <!--
-        </div>
-        <div class="row">
-    -->
             <div>
                 Posted on <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time> by 
                 {% assign authorName = "Unknown" %}
@@ -56,7 +51,8 @@ materialboxed: true
 <script>
     $(document).ready(function() {
         $("div.post-content img").each(function() {
-            $(this).addClass("materialboxed");
+            $(this).addClass("responsive-img post-img center-img materialboxed");
+            $(this).materialbox();
         });
     });
 </script>
