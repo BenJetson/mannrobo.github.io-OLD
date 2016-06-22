@@ -43,7 +43,7 @@ materialboxed: true
             
             {% if page.yt %}
             {% for vidID in page.yt %}
-            <iframe id="ytplayer" type="text/html" width=1000 height=400
+            <iframe id="ytplayer" type="text/html"
                     src="https://www.youtube.com/embed/{{vidID}}" 
                     frameborder="0" class="responsive-yt"></iframe>
             {% endfor %}
