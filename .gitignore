@@ -2,3 +2,6 @@ _site
 .sass-cache
 .jekyll-metadata
 Thumbs.db
+vendor
+.bundle
+Gemfile.lock
