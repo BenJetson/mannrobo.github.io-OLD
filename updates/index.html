@@ -1,0 +1,32 @@
+---
+layout: default
+title: Updates
+---
+
+<div class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <h2>Updates</h2>
+                 {% assign roof_postcount = paginator.page | times: paginator.per_page %}
+                <p>Displaying {{ paginator.page | minus: 1 | times: paginator.per_page | plus: 1}} thru {% if roof_postcount > paginator.total_posts %}{{paginator.total_posts}}{% else %}{{paginator.page | times: paginator.per_page}}{% endif %} of {{paginator.total_posts}}.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12">
+                <ul class="collection">
+                    {% for post in paginator.posts %}
+                    <li class="collection-item">
+<!--                        <a href="{{post.url | replace: '/updates', 'updates' | prepend: site.url}}">-->
+                            <span class="title">{{post.title}}</span>
+                            <p>{{post.date}}</p>
+<!--                        </a>-->
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
