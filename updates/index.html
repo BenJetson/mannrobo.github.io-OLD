@@ -14,14 +14,12 @@ title: Updates
         </div>
         <div class="row">
             <div class="col s12">
-                <ul class="collection">
+                <div class="collection">
                     {% for post in paginator.posts %}
-                    <li class="collection-item">
-<!--                        <a href="{{post.url | replace: '/updates', 'updates' | prepend: site.url}}">-->
-                            <span class="title">{{post.title}}</span>
-                            <p>{{post.date}}</p>
-<!--                        </a>-->
-                    </li>
+                    <a class="collection-item" href="{{post.url | replace: '/updates', 'updates' | prepend: site.url}}">
+                        <h6>{{post.title}}</h6>
+                        <p>{{ page.date | date: "%b %-d, %Y" }}</p>
+                    </a>
                     {% endfor %}
                 </ul>
             </div>
