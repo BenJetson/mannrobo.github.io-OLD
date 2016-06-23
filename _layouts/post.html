@@ -6,7 +6,7 @@ layout: default
         <div class="col s12">
             <h4>{{page.title}}</h4>
             <div>
-                Posted on <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time> by 
+                Posted on <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time> by
                 {% assign authorName = "Unknown" %}
                 {% assign authorUsername = 'nobody' %}
                 {% if page.author %}
@@ -24,7 +24,7 @@ layout: default
             </div>
             {% if page.tags.size > 0 %}
             <div>
-                Tagged 
+                Tagged
                 {% for post-tag in page.tags %}
                 <div class="chip">{{post-tag}}</div>
                 {% endfor %}
@@ -35,15 +35,15 @@ layout: default
     <div class="row">
         <div class="col s12 post-content">
             {{content}}
-            
+
             {% if page.yt %}
             {% for vidID in page.yt %}
             <iframe id="ytplayer" type="text/html"
-                    src="https://www.youtube.com/embed/{{vidID}}" 
+                    src="https://www.youtube.com/embed/{{vidID}}"
                     frameborder="0" class="responsive-yt"></iframe>
             {% endfor %}
             {% endif %}
-            
+
         </div>
     </div>
 </div>

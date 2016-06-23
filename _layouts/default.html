@@ -1,49 +1,49 @@
 <!DOCTYPE html>
 
 <html>
-    
+
     {% include head.html %}
-    
+
     <body>
         
         {% include navbar.html %}
-        
+
         <div class="page-content">
             <div class="wrapper">
                 {{ content }}
             </div>
         </div>
-        
+
         {% include footer.html %}
-        
+
         <script>
             // Page initialization script.
-            
+
             hideBack = {% if page.hideBack == true or page.hideBack == false %}{{page.hideBack}}{% else %}false{% endif %};
             isStandalone = (window.matchMedia('(display-mode: standalone)').matches);
-            
+
             if (!isStandalone) {
-                $("#app-navbtn").removeClass("hide"); 
+                $("#app-navbtn").removeClass("hide");
             } else if (hideBack) {
                 $("#app-navbtn").removeClass("hide");
             } else {
-                $("#app-backbtn").removeClass("hide"); 
+                $("#app-backbtn").removeClass("hide");
             }
-            
+
             if (isStandalone) {
                 $("#app-navfix").addClass("navbar-fixed");
             }
-            
+
             // Materialize CSS Library Initializations
             $(document).ready(function(){
-                {% if page.parallax %}$('.parallax').parallax(); // Parallax initialization{% else %}// Parallax not requested.{% endif %} 
+                {% if page.parallax %}$('.parallax').parallax(); // Parallax initialization{% else %}// Parallax not requested.{% endif %}
                 {% if page.materialbox %}$('.materialboxed').materialbox(); // Materialbox initialization{% else %}// Materialbox not requested.{% endif %}
                 {% if page.collapsible %}$('.collapsible').collapsible(); // Collapsible initialization{% else %}// Collapsible not requested.{% endif %}
                 $(".button-collapse").sideNav(); // Sidenav button initialization
                 $(".dropdown-button").dropdown(); // Dropdown buttons initialization
             });
         </script>
-        
+
     </body>
-    
+
 </html>

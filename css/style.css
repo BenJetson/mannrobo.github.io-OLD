@@ -58,14 +58,14 @@ ul.side-nav li a {
 }
 
 @media all and (display-mode: standalone) {
-    /* Here goes the CSS rules that will only apply if app is running standalone 
+    /* Here goes the CSS rules that will only apply if app is running standalone
 }
 
-/* Fixes Materialize CSS' error in 
-   browser-default styling for 
+/* Fixes Materialize CSS' error in
+   browser-default styling for
    unordered lists.*/
 ul.browser-default li {
-    list-style-type: disc; 
-    list-style-position: inside; 
+    list-style-type: disc;
+    list-style-position: inside;
     margin-left: 15px;
 }
