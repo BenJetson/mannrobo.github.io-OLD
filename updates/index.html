@@ -47,7 +47,11 @@ title: Updates
                         {% assign maxpage = pg_highcap %}
                     {% elsif 0 >= pg_lowcap %}
                         {% assign minpage = 1 %}
-                        {% assign maxpage = pagenum_amt %}
+                        {% if pagenum_amt > paginator.total_pages %}
+                            {% assign maxpage = paginator.total_pages %}
+                        {% else %}
+                            {% assign maxpage = pagenum_amt %}
+                        {% endif %}
                     {% elsif pg_highcap >= paginator.total_pages %}
                         {% assign minpage = paginator.total_pages | minus: pagenum_amt | plus: 1 %}
                         {% assign maxpage = paginator.total_pages %}
