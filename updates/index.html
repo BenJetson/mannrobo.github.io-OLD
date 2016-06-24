@@ -21,6 +21,71 @@ title: Updates
                         <p>{{ page.date | date: "%b %-d, %Y" }}</p>
                     </a>
                     {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <ul class="pagination">
+                    
+                    {% assign pagenum_amt = 7 %}
+                    {% if 5 > pagenum_amt %}{% assign pagenum_amt = 5 %}{% endif %}
+                    {% if pagenum_amt | modulo: 2 == 0 %}{% assign pagenum_amt = pagenum_amt | minus: 1 %}{% endif %}
+                    
+                    {% assign count_diff = pagenum_amt | minus: 1 | divided_by: 2 %}
+                    
+                    {% assign pg_lowcap = paginator.page | minus: count_diff %}
+                    {% assign pg_highcap = paginator.page | plus: count_diff %}
+                    
+                    {% if pg_lowcap > 0 and paginator.total_pages > pg_highcap %}
+                        {% assign minpage = pg_lowcap %}
+                        {% assign maxpage = pg_highcap %}
+                    {% elsif 0 >= pg_lowcap %}
+                        {% assign minpage = 1 %}
+                        {% assign maxpage = pagenum_amt %}
+                    {% elsif pg_highcap >= paginator.total_pages %}
+                        {% assign minpage = paginator.total_pages | minus: pagenum_amt | plus: 1 %}
+                        {% assign maxpage = paginator.total_pages %}
+                    {% endif %}
+                    
+                    {% if paginator.previous_page == nil %}
+                    <li class="disabled waves-effect waves-red">
+                        <a><i class="material-icons">chevron_left</i></a>
+                    </li>
+                    {% else %}
+                    <li class="waves-effect">
+                        <a href="{{ paginator.previous_page_path | replace: '/updates', 'updates' | prepend: site.url}}">
+                            <i class="material-icons">chevron_left</i>
+                        </a>
+                    </li>
+                    {% endif %}
+                    {% for i in (minpage..maxpage) %}
+                    <li class="waves-effect{% if i == paginator.page %} active{% endif %}">
+                        {% if i == 1 %}
+                        <a href="{{ 'updates' | prepend: site.url }}">
+                        {% else %}
+                        <a href="{{site.url}}updates/page/{{i}}">
+                        {% endif %}
+                            {{i}}
+                        </a>
+                    </li>
+                    {% endfor %}
+                    {% if paginator.next_page == nil %}
+                    <li class="disabled waves-effect waves-red">
+                        <a><i class="material-icons">chevron_right</i></a>
+                    </li>
+                    {% else %}
+                    <li class="waves-effect">
+                        <a href="{{ paginator.next_page_path | replace: '/updates', 'updates' | prepend: site.url}}">
+                            <i class="material-icons">chevron_right</i>
+                        </a>
+                    </li>
+                    {% endif %}
                 </ul>
             </div>
         </div>
