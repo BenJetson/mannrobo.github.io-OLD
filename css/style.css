@@ -3,6 +3,10 @@
     padding: 5px;
 }
 
+div.row.no-margin {
+    margin: 0;
+}
+
 img.menu-logo {
     display: block;
     margin: 0 auto;
@@ -58,7 +62,7 @@ ul.side-nav li a {
 }
 
 @media all and (display-mode: standalone) {
-    /* Here goes the CSS rules that will only apply if app is running standalone
+    /* Here goes the CSS rules that will only apply if app is running standalone */
 }
 
 /* Fixes Materialize CSS' error in

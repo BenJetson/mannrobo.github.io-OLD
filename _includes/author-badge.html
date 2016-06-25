@@ -1,0 +1,14 @@
+{% assign authorName = "Unknown" %}
+{% assign authorUsername = 'nobody' %}
+{% if page.author %}
+{% for author in site.data.authors %}
+    {% if author.username == page.author and author.name %}
+        {% assign authorName = author.name %}
+        {% assign authorUsername = author.username %}
+    {% endif %}
+{% endfor %}
+{% endif %}
+<div class="chip">
+    <img src="{{site.url}}img/authors/{{authorUsername}}.jpg" alt="{{authorName}}">
+    {{authorName}}
+</div>

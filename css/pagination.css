@@ -1,0 +1,50 @@
+ul.pagination {
+    display: inline-block;
+}
+
+@media only screen and (max-width: 600px) {
+    ul.pagination li:not(.paginator-icon) {
+        font-size: 1.1rem;
+        padding: 0 7px;
+    }
+    ul.pagination li i {
+        font-size: 1.4rem;
+    }
+    li.paginator-icon {
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    ul.pagination li:not(.paginator-icon) {
+        font-size: 1rem;
+        padding: 0 5px;
+    }
+}
+
+div.list-post a {
+   width: 100%
+}
+
+p.list-post-preview {
+    max-height: 3.6em;
+    line-height: 1.2em;
+    overflow: hidden;
+    position: relative;
+}
+
+p.list-post-preview:after {
+  content: "read more\2026";
+  color: #00acc1;
+  text-align: right;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 70%;
+  height: 1.2em;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%);
+} /* Thanks CSS Tricks! https://css-tricks.com/line-clampin/ */
+
+/*div.collection a.collection-item {*/
+/*    color: rgba(0,0,0,0.87);*/
+/*}*/

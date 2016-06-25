@@ -18,16 +18,17 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     
-    <!-- Custom Stylesheets -->
-    <link rel="stylesheet" href="{{ '/css/main.css' | prepend: site.url }}">
-    <link rel="stylesheet" href="{{ '/css/style.css' | prepend: site.url }}">
-    
     <!-- jQuery Library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     
     <!-- Materialize CSS Libraries -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+    
+    <!-- Custom Stylesheets -->
+    <link rel="stylesheet" href="{{ '/css/main.css' | prepend: site.url }}">
+    <link rel="stylesheet" href="{{ '/css/style.css' | prepend: site.url }}">
+    {% if page.pagination %}<link rel="stylesheet" href="{{ '/css/pagination.css' | prepend: site.url }}">{% endif %}
     
     <!-- Google Analytics -->
     <script>
