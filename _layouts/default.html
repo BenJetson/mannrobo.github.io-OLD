@@ -7,7 +7,11 @@
     <body>
         
         {% include navbar.html %}
-
+        
+        {% if site.url != "http://127.0.0.1:4000/" and site.dev-warn %}
+            {% include dev-warn.html %}
+        {% endif %}
+        
         <div class="page-content">
             <div class="wrapper">
                 {{ content }}

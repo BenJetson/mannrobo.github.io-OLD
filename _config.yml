@@ -32,6 +32,7 @@ timezone: America/New_York
 permalink: "updates/:year/:month/:day/:title/"
 
 # Build settings
+dev-warn: true
 markdown: kramdown
 exclude: [vendor, Gemfile, Gemfile.lock, README.md, ATTRIBUTION.md]
 
