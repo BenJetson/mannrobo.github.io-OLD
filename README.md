@@ -1,4 +1,7 @@
 [![Stories in Ready](https://badge.waffle.io/mannrobo/mannrobo.github.io.png?label=ready&title=Ready)](https://waffle.io/mannrobo/mannrobo.github.io)
+
+![Mann Robotics Logo]("https://mannrobo.github.io/img/logo-ext-sm.png")
+
 # mannrobo.github.io
 
 This repository contains the website for our club.
