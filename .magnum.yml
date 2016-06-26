@@ -7,5 +7,5 @@ before_script: []
 script:
   - bundle exec jekyll build
 after_script: 
-  - ./.tests/status-report/server.rb
+  - ruby ./.tests/status-report/server.rb
 
