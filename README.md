@@ -10,7 +10,7 @@ Our awesome website is currently under construction, which is to replace our not
 
 [![Ready](https://badge.waffle.io/mannrobo/mannrobo.github.io.png?label=ready&title=Ready)](https://waffle.io/mannrobo/mannrobo.github.io)
 [![In Progress](https://badge.waffle.io/mannrobo/mannrobo.github.io.png?label=in%20progress&title=In%20Progress)](https://waffle.io/mannrobo/mannrobo.github.io)
-![Magnum CI Build Status](https://magnum-ci.com/status/7740ee7e6411790bea7d72f4cb4100e2.png)
+[![CircleCI](https://circleci.com/gh/mannrobo/mannrobo.github.io/tree/master.svg?style=svg)](https://circleci.com/gh/mannrobo/mannrobo.github.io/tree/master)
 
 You can track the progress of site development live over on our [Waffle.io board](https://waffle.io/mannrobo/mannrobo.github.io/) or on our GitHub repository [issue tracker](https://github.com/mannrobo/mannrobo.github.io/issues) and [milestone tracker](https://github.com/mannrobo/mannrobo.github.io/milestones). 
 
