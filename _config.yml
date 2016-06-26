@@ -25,11 +25,13 @@ url: "https://mannrobo.github.io/"
 dev-warn: true
 markdown: kramdown
 exclude: 
+  - .bundle
   - vendor
   - Gemfile
   - Gemfile.lock
   - README.md
   - ATTRIBUTION.md
+  - .tests
 safe: true
 gems:
   - jekyll-paginate

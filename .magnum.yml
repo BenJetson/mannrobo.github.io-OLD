@@ -6,4 +6,5 @@ before_script: []
 script:
   - ./.tests/url-check.sh
   - bundle exec jekyll build
-after_script: []
+after_script: 
+  - ./.tests/status-report/server.rb
