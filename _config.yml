@@ -7,16 +7,27 @@
 
 # Site settings
 title: Mann Robotics
-email: bgodfr5236@greenvilleschools.us
+email: mannrobo@users.noreply.github.com
+github_username: mannrobo
+repository: mannrobo/mannrobo.github.io
+timezone: America/New_York
 description: > # this means to ignore newlines until "baseurl:"
-  J.L. Mann Robotics is an active VEX Robotics club of two teams.
+  Mann Robotics is an active VEX Robotics club of two teams.
   We participate in high-school level VRC every year, and have for
   the past two seasons.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://mannrobo.github.io/" # for when hosted online at gh-pages
 #url: "http://127.0.0.1:4000/" # for when editing with a local jekyll server
-github_username: mannrobo
-repository: mannrobo/mannrobo.github.io
+
+# Build settings
+dev-warn: true
+markdown: kramdown
+exclude: 
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - ATTRIBUTION.md
 safe: true
 gems:
   - jekyll-paginate
@@ -28,15 +39,9 @@ whitelist:
   - jemoji
 paginate: 10
 paginate_path: "updates/page/:num/"
-timezone: America/New_York
 permalink: "updates/:year/:month/:day/:title/"
 
-# Build settings
-dev-warn: true
-markdown: kramdown
-exclude: [vendor, Gemfile, Gemfile.lock, README.md, ATTRIBUTION.md]
-
-# Responsive Design YAML Defaults
+# YAML Frontmatter Defaults
 defaults:
   -
     scope:
