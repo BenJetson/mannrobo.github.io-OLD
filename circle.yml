@@ -1,0 +1,9 @@
+machine:
+  ruby:
+    version: 2.3.0
+  pre:
+    - ./.tests/url-check.sh
+  timezone: America/New_York
+test:
+  override:
+    - bundle exec jekyll build
