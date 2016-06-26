@@ -1,12 +1,9 @@
 machine:
   ruby:
     version: 2.3.0
-  pre:
-    - echo $PWD
-    - ls
-    - ls ~
-    - ./.tests/url-check.sh
   timezone: America/New_York
 test:
   override:
+    - cd ~/mannrobo.github.io
+    - ./.tests/url-check.sh
     - bundle exec jekyll build
