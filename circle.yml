@@ -1,7 +1,6 @@
 machine:
   ruby:
     version: 2.3.0
-  timezone: America/New_York
 test:
   override:
     - cd ~/mannrobo.github.io
