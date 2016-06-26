@@ -6,6 +6,6 @@ install: []
 before_script: []
 script:
   - bundle exec jekyll build
-after_script: 
-  - bundle exec ruby ./.tests/status-report/server.rb
+after_script: []
+  # - bundle exec ruby ./.tests/status-report/server.rb
 
