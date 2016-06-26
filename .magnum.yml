@@ -1,8 +1,8 @@
 ---
 # Build Configuration
-before_install: []
-install: 
+before_install: 
   - ./.tests/url-check.sh
+install: []
 before_script: []
 script:
   - bundle exec jekyll build
