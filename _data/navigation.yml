@@ -3,10 +3,10 @@
   href:
   icon: home
 
--
-  text: About
-  href: about
-  icon: people
+#-
+#  text: About
+#  href: about
+#  icon: people
 
 -
   text: Updates
