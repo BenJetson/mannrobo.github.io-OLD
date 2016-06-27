@@ -15,7 +15,8 @@ description: > # this means to ignore newlines until "baseurl:"
   Mann Robotics is an active VEX Robotics club of two teams.
   We participate in high-school level VRC every year, and have for
   the past two seasons.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "" 
+        # ^ the subpath of your site, e.g. /blog
 url: "https://mannrobo.github.io/" 
         # ^ for when hosted online at gh-pages
 # url: "http://127.0.0.1:4000/" 
