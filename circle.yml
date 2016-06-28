@@ -6,7 +6,7 @@ test:
     - cd ~/mannrobo.github.io
     - ./.tests/config-check.sh
     - bundle exec jekyll build
-general:
-  branches:
-    only:
-      - master
+#general:
+#  branches:
+#    only:
+#      - master
