@@ -22,8 +22,7 @@ You can track the progress of site development live over on our [Waffle.io board
 * [Lightbox 2](http://lokeshdhakar.com/projects/lightbox2/)
 * [OWL Carousel 2](http://owlcarousel.owlgraphic.com//)
 
-
-* For more info, see [ATTRIBUTION.md](https://github.com/mannrobo/mannrobo.github.io/blob/master/ATTRIBUTION.md).
+_For more info, see [ATTRIBUTION.md](https://github.com/mannrobo/mannrobo.github.io/blob/master/ATTRIBUTION.md)._
 
 ## Why so many different chamges?
 
