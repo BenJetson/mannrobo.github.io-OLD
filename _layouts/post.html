@@ -37,11 +37,23 @@ layout: default
 
 {% if page.autoImg %}
 <script>
+    
+    /*
+     * Makes images use Materialbox and adds the source caption.
+     * 
+     * For more details as to why we're doing this client-side
+     *   with jQuery, see ticket mannrobo/mannrobo.github.io#20
+     */
+    
     $(document).ready(function() {
         $("div.post-content img").each(function() {
-            $(this).addClass("responsive-img post-img center-img materialboxed");
-            $(this).materialbox();
+            $(this).unwrap("<p></p>");
+            $(this).wrap('<div class="center-align post-img-container"></div>');
+            $(this).addClass("responsive-img materialboxed");
+            $(this).after("<span class='grey-text text-darken-1 truncate'>Source: " + $(this).attr("alt") + "</span>");
         });
+        
+        $(".materialboxed").materialbox();
     });
 </script>
 {% endif %}
