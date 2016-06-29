@@ -1,0 +1,13 @@
+<div class="modal bottom-sheet" id="link-headsup">
+    <div class="container">
+        <div class="center-align"><br><i class="medium material-icons">warning</i></div>
+        <h5 class="center-align flow-text red-text text-darken-2">Heads up! You're leaving Mann Robotics.</h5>
+        <p class="center-align">You clicked an outbound link to a site that doesn't belong to us. We're not responsible for any content you find on external sites.</p>
+        <p class="center-align">By clicking <span class="blue-text">LEAVE</span> below, you accept the above statement and will be transported to:</p>
+        <div class="indigo-text center-align" id="outbound-dest">{{site.url}}</div>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect btn-flat">Stay</a>
+        <a href="{{site.url}}" id="outbound-anchor" class="modal-action waves-effect waves-blue btn-flat blue-text text-darken-1">Leave</a>
+    </div>
+</div>

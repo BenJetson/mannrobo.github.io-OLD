@@ -1,0 +1,30 @@
+---
+layout: default
+title: Resources
+---
+<div class="section">
+    <div class="container">
+        <div class="row">
+            <h2 class="center-align">Resources</h2>
+        </div>
+        <div class="row">
+            {% for item in site.data.resources %}
+            <div class="col s12 m6">
+                <div class="card blue-grey">
+                    <div class="card-content white-text">
+                        <span class="card-title">{{item.title}}</span>
+                        
+                        <p>
+                            {{item.desc}}
+                        </p>
+                    </div>
+                    <div class="card-action">
+                        <a href="{{item.link}}">Visit Resource</a>
+                        <span class="link green-text text-lighten-3 truncate">{{item.link}}</span>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

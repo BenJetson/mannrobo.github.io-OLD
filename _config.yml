@@ -19,7 +19,7 @@ baseurl: ""
         # ^ the subpath of your site, e.g. /blog
 url: "https://mannrobo.github.io/" 
         # ^ for when hosted online at gh-pages
-#url: "http://127.0.0.1:4000/" 
+# url: "http://127.0.0.1:4000/" 
         # ^ for when editing with a local jekyll server
 
 # Build settings
@@ -61,3 +61,8 @@ defaults:
       category: "updates"
       layout: "post"
       autoImg: true
+  -
+    scope:
+      path: "js"
+    values:
+      layout: null
