@@ -14,13 +14,10 @@ img.menu-logo {
     width: 170px;
 }
 
-iframe.responsive-yt {
-    display: block;
-    width: 500px;
-    height: 250px;
-    max-width: 100%;
-    margin: 0 auto 15px auto;
+ul.side-nav li a {
+    height: 50px;
 }
+
 
 @font-face {
     font-family: 'custom-icons';
@@ -43,8 +40,29 @@ img.gallery-img {
     margin-bottom: 20px;
 }
 
-img.post-img {
+/* Post Styling */
+
+iframe.responsive-yt {
+    display: block;
+    width: 500px;
+    height: 250px;
+    max-width: 100%;
+    margin: 0 auto 15px auto;
+}
+
+div.post-img-container {
+    max-width: 100%;
+    margin: 0 auto;
     width: 400px;
+}
+
+div.post-img-container img {
+    display: block;
+}
+
+div.post-img-container span {
+    margin-top: .25em;
+    font-style: italic;
 }
 
 div.post-meta div.chip {
@@ -57,9 +75,7 @@ div.post-meta {
     margin-bottom: 0px;
 }
 
-ul.side-nav li a {
-    height: 50px;
-}
+/* Standalone Web App Styling (CRX) */
 
 @media all and (display-mode: standalone) {
     /* Here goes the CSS rules that will only apply if app is running standalone */
