@@ -45,7 +45,7 @@
                 {% if page.parallax %}$('.parallax').parallax(); // Parallax initialization{% else %}// Parallax not requested.{% endif %}
                 {% if page.materialbox %}$('.materialboxed').materialbox(); // Materialbox initialization{% else %}// Materialbox not requested.{% endif %}
                 {% if page.collapsible %}$('.collapsible').collapsible(); // Collapsible initialization{% else %}// Collapsible not requested.{% endif %}
-                {% if page.calendar %}$('#calendar').fullCalendar(); // FullCalendar initialization {% else %}// FullCalendar not requested.{% endif %}
+                {% if page.calendar %}doCalendar(); // FullCalendar initialization {% else %}// FullCalendar not requested.{% endif %}
                 $(".button-collapse").sideNav(); // Sidenav button initialization
                 $(".dropdown-button").dropdown(); // Dropdown buttons initialization
             });
