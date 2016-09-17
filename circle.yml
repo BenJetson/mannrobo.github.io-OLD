@@ -6,7 +6,8 @@ dependencies:
     - gem install github-pages
     - gem environment
   cache_directories:
-    - "/var/lib/gems/2.3.0/gems"
+    - "/home/ubuntu/.rvm/gems/ruby-2.3.0"
+    - "/home/ubuntu/.rvm/gems/ruby-2.3.0@global"
 test:
   override:
     - cd ~/mannrobo.github.io
