@@ -3,7 +3,7 @@ machine:
     version: 2.3.0
 dependencies:
   override:
-    - gem install github-pages
+    - sudo gem install github-pages
     - gem environment
     - ls /var/lib/gems/2.3.0/gems
   cache_directories:
