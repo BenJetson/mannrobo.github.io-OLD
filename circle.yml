@@ -1,12 +1,14 @@
 machine:
   ruby:
     version: 2.3.0
+dependencies:
+  override:
+    - gem install github-pages
+  cache_directories:
+    - "/home/ubuntu/.rvm/gems/ruby-2.3.0"
+    - "/home/ubuntu/.rvm/gems/ruby-2.3.0@global"
 test:
   override:
     - cd ~/mannrobo.github.io
     - ./.tests/config-check.sh
-    - bundle exec jekyll build
-#general:
-#  branches:
-#    only:
-#      - master
+    - jekyll build
