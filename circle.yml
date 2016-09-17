@@ -7,6 +7,11 @@ test:
     - ./.tests/config-check.sh
     - gem install github-pages
     - jekyll build
+    - gem environment
+    - ls /var/lib/gems/2.3.0/gems
+dependencies:
+  cache_directories:
+    - "/var/lib/gems/2.3.0/gems"
 #general:
 #  branches:
 #    only:
