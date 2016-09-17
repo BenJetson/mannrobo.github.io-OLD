@@ -5,7 +5,8 @@ test:
   override:
     - cd ~/mannrobo.github.io
     - ./.tests/config-check.sh
-    - bundle exec jekyll build
+    - gem install github-pages
+    - jekyll serve
 #general:
 #  branches:
 #    only:
