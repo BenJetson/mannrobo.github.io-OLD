@@ -6,7 +6,7 @@ test:
     - cd ~/mannrobo.github.io
     - ./.tests/config-check.sh
     - gem install github-pages
-    - jekyll serve
+    - jekyll build
 #general:
 #  branches:
 #    only:
