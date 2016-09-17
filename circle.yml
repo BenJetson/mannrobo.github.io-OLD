@@ -4,7 +4,6 @@ machine:
 dependencies:
   override:
     - gem install github-pages
-    - gem environment
   cache_directories:
     - "/home/ubuntu/.rvm/gems/ruby-2.3.0"
     - "/home/ubuntu/.rvm/gems/ruby-2.3.0@global"
