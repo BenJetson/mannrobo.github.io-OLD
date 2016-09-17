@@ -5,7 +5,6 @@ dependencies:
   override:
     - gem install github-pages
     - gem environment
-    - ls /var/lib/gems/2.3.0/gems
   cache_directories:
     - "/var/lib/gems/2.3.0/gems"
 test:
