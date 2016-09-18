@@ -55,6 +55,7 @@ defaults:
       layout: "default"
       hideBack: false
       bigNav: false
+      smoothAnchor: false
   -
     scope:
       path: "_posts"
