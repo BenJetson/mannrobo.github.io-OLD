@@ -1,5 +1,5 @@
-<div class="section blue darken-2" id="bignav">
-    <div class="container">
+<div class="section blue darken-2 valign-wrapper" id="bignav">
+    <div class="container valign">
         <div class="row">
             <div class="col s12">
                 <div class="bignav-icon">
@@ -9,27 +9,14 @@
                 </div>
             </div>
         </div>
-        {% assign max-items = 5 %}
-        {% assign item-counter = 0 %}
-        {% assign skip-first-item = true %}
-
-        {% for navitem in site.data.navigation %}
-
         
-        {% if skip-first-item and forloop.index == 1 %}
-            {% continue %}
-        {% else %}
-            {% assign item-counter = item-counter | plus: 1 %}
-        {% endif %}
-
-        {% if max-items >= item-counter %}
+        {% for navitem in site.data.splash-nav %}
         <div class="row center">
             <div class="col s12">
-                <a href="{{navitem.href | prepend: site.url}}"
+                <a href="#{{navitem.href}}"
                 class="light-blue waves-effect waves-light btn z-depth-0">{{navitem.text}}</a>
             </div>
         </div>
-        {% endif %}
         {% endfor %}
     </div>
 </div>
