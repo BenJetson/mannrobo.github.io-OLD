@@ -1,0 +1,33 @@
+#bignav {
+    height: 100vh;
+    padding: 10px 0;
+}
+
+#bignav a.btn {
+    min-width: 60%;
+}
+
+.bignav-icon {
+    max-width: 60%;
+    border: 3px solid #ddf;
+    padding: 15% 10px;
+    background-color: #fff;
+    margin: 0 auto;
+}
+
+.splash-nav {
+    display: none;
+}
+
+.regular-nav {
+    display: block;
+}
+
+@media only screen and (max-device-width: 480px) {
+    .splash-nav {
+        display: block;
+    }
+    .regular-nav {
+        display: none;
+    }
+}

@@ -54,6 +54,7 @@ defaults:
     values:
       layout: "default"
       hideBack: false
+      bigNav: false
   -
     scope:
       path: "_posts"

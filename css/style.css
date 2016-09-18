@@ -95,3 +95,7 @@ ul.browser-default li {
     list-style-position: inside;
     margin-left: 15px;
 }
+
+footer.page-footer {
+    margin-top: 0;
+}

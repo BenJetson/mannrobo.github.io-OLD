@@ -5,11 +5,18 @@
     {% include head.html %}
 
     <body>
-        {% if page.pigNav %}
-            {% include bigNav.html %}
+        {% if page.bigNav %}
+            <div class="splash-nav">
+                {% include bigNav.html %}
+            </div>
+            <div class="regular-nav">
+                {% include navbar.html %}
+            </div>
         {% else %}
             {% include navbar.html %}
         {% endif %}
+
+
         
         {% if site.url != "http://127.0.0.1:4000/" and site.dev-warn %}
             {% include dev-warn.html %}
