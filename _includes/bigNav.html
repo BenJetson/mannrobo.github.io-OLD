@@ -7,9 +7,16 @@
         </div>
         {% assign max-items = 4 %}
         {% assign item-counter = 0 %}
+        {% assign skip-first-item = true %}
 
         {% for navitem in site.data.navigation %}
-        {% assign item-counter = item-counter | plus: 1 %}
+
+        
+        {% if skip-first-item and forloop.index == 1 %}
+            {% continue %}
+        {% else %}
+            {% assign item-counter = item-counter | plus: 1 %}
+        {% endif %}
 
         {% if max-items >= item-counter %}
         <div class="row center">
