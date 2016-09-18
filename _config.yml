@@ -17,9 +17,9 @@ description: > # this means to ignore newlines until "baseurl:"
   the past two seasons.
 baseurl: "" 
         # ^ the subpath of your site, e.g. /blog
-url: "https://mannrobo.github.io/" 
+# url: "https://mannrobo.github.io/" 
         # ^ for when hosted online at gh-pages
-# url: "http://127.0.0.1:4000/" 
+url: "http://127.0.0.1:4000/" 
         # ^ for when editing with a local jekyll server
 
 # Build settings
@@ -54,6 +54,7 @@ defaults:
     values:
       layout: "default"
       hideBack: false
+      bigNav: false
   -
     scope:
       path: "_posts"
