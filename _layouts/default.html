@@ -55,7 +55,7 @@
                 {% if page.parallax %}$('.parallax').parallax(); // Parallax initialization{% else %}// Parallax not requested.{% endif %}
                 {% if page.materialbox %}$('.materialboxed').materialbox(); // Materialbox initialization{% else %}// Materialbox not requested.{% endif %}
                 {% if page.collapsible %}$('.collapsible').collapsible(); // Collapsible initialization{% else %}// Collapsible not requested.{% endif %}
-                {% if page.bigNav %}$('a[href^="#"]').on('click', function(event){ event.preventDefault();$('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);}); // Smooth scroll for anchor links.{% else %}// Anchor smooth scroll not requested.{% endif %}
+                {% if page.smoothAnchor %}$('a[href^="#"]').on('click', function(event){ event.preventDefault();$('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);}); // Smooth scroll for anchor links.{% else %}// Anchor smooth scroll not requested.{% endif %}
                 $(".button-collapse").sideNav(); // Sidenav button initialization
                 $(".dropdown-button").dropdown(); // Dropdown buttons initialization
             });
