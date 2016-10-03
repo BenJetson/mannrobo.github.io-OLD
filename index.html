@@ -46,7 +46,7 @@ smoothAnchor: true
         </div>
         <div class="row">
             <div class="col s12">
-                <ul class="collection">
+                <ul class="collection z-depth-1">
                     <li class="collection-item avatar">
                         <img class="circle amber" src="{{site.url}}img/logo-min-sq.png">
                         <span class="title">UNIX Epoch</span>
@@ -76,7 +76,7 @@ smoothAnchor: true
             <div class="col s12 m4">
                 <h5 class="center-align">3796A - Mann Made</h5>
 
-                <ul class="collapsible" data-collapsible="accordion">
+                <ul class="collapsible z-depth-1" data-collapsible="accordion">
                     <li class=""
                     <li class="white">
                         <div class="collapsible-header"><i class="material-icons">info</i>About</div>
@@ -120,7 +120,7 @@ smoothAnchor: true
             <div class="col s12 m4">
                 <h5 class="center-align">3796B - Some Assembly Required</h5>
 
-                <ul class="collapsible" data-collapsible="accordion">
+                <ul class="collapsible z-depth-1" data-collapsible="accordion">
                     <li class="white">
                         <div class="collapsible-header"><i class="material-icons">info</i>About</div>
                         <div class="collapsible-body white">
@@ -153,7 +153,7 @@ smoothAnchor: true
             <div class="col s12 m4">
                 <h5 class="center-align">3796C - Womann</h5>
 
-                <ul class="collapsible" data-collapsible="accordion">
+                <ul class="collapsible z-depth-1" data-collapsible="accordion">
                     <li class="white">
                         <div class="collapsible-header"><i class="material-icons">info</i>About</div>
                         <div class="collapsible-body white">
@@ -220,31 +220,43 @@ smoothAnchor: true
             <h4 class="center-align">Contact Us</h4>
         </div>
         <div class="row">
-            <form class="col s12" method="post">
-                <div class="input-field col s12">
-                    <!--<i class="material-icons prefix">account_circle</i>-->
-                    <input id="name" type="text" name="name" class="validate" required>
-                    <label for="name">Name*</label>
+            <div class="col s12 m6">
+                <div class="card-panel yellow darken-2">
+                    ASDF
                 </div>
-                <div class="input-field col s12 m6">
-                    <!--<i class="material-icons prefix">contact_mail</i>-->
-                    <input id="email" type="email" name="email" class="validate" required>
-                    <label for="email">Email*</label>
-                </div>
-                <div class="input-field col s12 m6">
-                    <!--<i class="material-icons prefix">contact_phone</i>-->
-                    <input id="phone" type="text" name="phone" class="validate">
-                    <label for="phone">Phone</label>
-                </div>
-                <div class="input-field col s12">
-                    <!--<i class="material-icons prefix">mode_edit</i>-->
-                    <textarea id="message" class="materialize-textarea" name="message"></textarea>
-                    <label for="message">Message*</label>
-                </div>
-                <button class="btn waves-effect waves-light right" type="submit" name="action">Submit
-                    <i class="material-icons right">send</i>
-                </button>
-            </form>
+            </div>
+            <div class="col s12 m6">
+                <form method="post">
+                    <div class="card yellow-ligten-3">
+                        <div class="card-content">
+                            <span class="card-title">Send us a message</span>
+                            <div class="input-field">
+                                <i class="material-icons prefix">account_circle</i>
+                                <input id="name" type="text" name="name" class="validate" required>
+                                <label for="name">Name*</label>
+                            </div>
+                            <div class="input-field">
+                                <i class="material-icons prefix">contact_mail</i>
+                                <input id="email" type="email" name="email" class="validate" required>
+                                <label for="email">Email*</label>
+                            </div>
+                            <div class="input-field">
+                                <i class="material-icons prefix">contact_phone</i>
+                                <input id="phone" type="text" name="phone" class="validate">
+                                <label for="phone">Phone</label>
+                            </div>
+                            <div class="input-field">
+                                <i class="material-icons prefix">mode_edit</i>
+                                <textarea id="message" class="materialize-textarea" name="message"></textarea>
+                                <label for="message">Message*</label>
+                            </div>
+                        </div>
+                        <div class="card-action">
+                            <a href="javascript:void(0);" onclick="$(this).closest('form').submit();">SUBMIT</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </div>

@@ -99,3 +99,10 @@ ul.browser-default li {
 footer.page-footer {
     margin-top: 0;
 }
+
+/* Fixes bug in Materialize Input field
+     label spacing. */
+
+.input-field label {
+    left: 0; 
+}
